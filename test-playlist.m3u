@@ -3,7 +3,7 @@
 https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8
 #EXTINF:-1 tvg-id="apple-bipbop" group-title="Live test streams",Apple HLS Test Pattern
 https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
-#EXTINF:-1 group-title="Open licence films",Big Buck Bunny (Blender Foundation, CC BY 3.0)
+#EXTINF:-1 tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Big_buck_bunny_poster_big.jpg?width=400" group-title="Open licence films (Blender Foundation - CC BY 3.0)",Big Buck Bunny
 https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
-#EXTINF:-1 group-title="Open licence films",Tears of Steel (Blender Foundation, CC BY 3.0)
+#EXTINF:-1 tvg-logo="https://commons.wikimedia.org/wiki/Special:FilePath/Tos-poster.png?width=400" group-title="Open licence films (Blender Foundation - CC BY 3.0)",Tears of Steel
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
