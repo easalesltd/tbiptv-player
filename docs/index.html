@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TBIPTV — Xbox player for your own playlists</title>
+  <meta name="description" content="TBIPTV is an Xbox player for Xtream Codes and M3U playlists you already have. No channels, films or series are included.">
+  <meta name="theme-color" content="#0B0D12">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0D12'/%3E%3Cpath d='M26 18l22 14-22 14z' fill='%235A8EFF'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0B0D12;
+      --surface: #14171E;
+      --elevated: #1E232D;
+      --text: #F0F0F0;
+      --muted: #949494;
+      --accent: #5A8EFF;
+      --line: #2A3140;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(960px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+    .brand strong { font-size: 28px; letter-spacing: 0.02em; }
+    .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--elevated);
+      display: grid;
+      place-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 14px 22px;
+      border-radius: 10px;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn.secondary {
+      background: var(--elevated);
+      color: var(--text);
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.1;
+      margin: 12px 0 16px;
+      letter-spacing: -0.03em;
+    }
+    .lede { font-size: 24px; max-width: 38rem; margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .hint { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+    .hero { padding: 28px 0 12px; }
+    .notice, .card, .step {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .notice { padding: 18px 20px; margin: 36px 0; }
+    .notice strong { display: block; margin-bottom: 4px; }
+    h2 { font-size: 32px; margin: 0 0 16px; }
+    .steps { display: grid; gap: 14px; }
+    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; }
+    .num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+    .step p { margin: 4px 0 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .card { padding: 18px 20px; }
+    .card h3 { margin: 0 0 6px; font-size: 22px; }
+    .card p { margin: 0; color: var(--muted); }
+    section { padding: 18px 0 8px; }
+    footer {
+      margin-top: 48px;
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 18px;
+    }
+    footer p { margin: 0 0 8px; }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      header { align-items: flex-start; flex-direction: column; }
+      .lede { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3.5l13 7.5-13 7.5z" fill="#5A8EFF"/></svg>
+        </span>
+        <strong>TBIPTV</strong>
+      </a>
+      <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <h1>A television player for playlists you already have.</h1>
+        <p class="lede">TBIPTV plays your own Xtream Codes login or M3U playlist on Xbox, with a layout made for the controller and a big screen.</p>
+        <div class="actions">
+          <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get TBIPTV</a>
+          <a class="btn secondary" href="#start">How to start</a>
+        </div>
+        <p class="hint">On your Xbox, open the Microsoft Store and search for TBIPTV.</p>
+      </section>
+
+      <div class="notice">
+        <strong>A player only.</strong>
+        TBIPTV does not include, sell or link to any channels, films, series or subscriptions. You add a playlist from a service you are allowed to watch.
+      </div>
+
+      <section id="start">
+        <h2>How to start</h2>
+        <div class="steps">
+          <article class="step">
+            <div class="num">1</div>
+            <div>
+              <strong>Install it from the Store</strong>
+              <p>Search for TBIPTV on your Xbox, or use the button on this page from a phone or computer.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="num">2</div>
+            <div>
+              <strong>Add your playlist</strong>
+              <p>Type the server address, username and password from your provider, or paste the full link they sent you. An M3U address works too.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="num">3</div>
+            <div>
+              <strong>Watch with the controller</strong>
+              <p>Live TV, a guide, films and series. Favourites, resume, and a small player in the corner while you browse.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>What it does</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Live TV</h3>
+            <p>Categories, channel names and a TV guide when your playlist includes one.</p>
+          </article>
+          <article class="card">
+            <h3>Films and series</h3>
+            <p>Posters, plots, cast and episode lists, with resume and the next episode.</p>
+          </article>
+          <article class="card">
+            <h3>Mini player</h3>
+            <p>Keep the picture in the corner while you look through the library.</p>
+          </article>
+          <article class="card">
+            <h3>Private on your console</h3>
+            <p>Logins stay on the Xbox and are sent only to the server you enter. No account, adverts or tracking.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Developed by Langeydong. Published by East Anglian Sales LTD.</p>
+      <p><a href="https://github.com/easalesltd/tbiptv-player/blob/main/PRIVACY.md">Privacy policy</a> · <a href="https://github.com/easalesltd/tbiptv-player/issues">Questions and support</a></p>
+      <p>© 2026 Langeydong. TBIPTV does not provide any content.</p>
+    </footer>
+  </div>
+</body>
+</html>
