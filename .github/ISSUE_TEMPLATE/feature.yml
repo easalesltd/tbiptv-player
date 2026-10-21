@@ -1,0 +1,12 @@
+name: Feature request
+description: Something TBIPTV should do
+title: "Feature: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should the app do?
+      description: Leave out your password and playlist link.
+    validations:
+      required: true
