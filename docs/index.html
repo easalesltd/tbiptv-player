@@ -3,10 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TBIPTV — Xbox player for your own playlists</title>
-  <meta name="description" content="TBIPTV is an Xbox player for Xtream Codes and M3U playlists you already have. No channels, films or series are included.">
+  <title>TBIPTV — The Best IPTV player for Xbox and the Microsoft Store</title>
+  <meta name="description" content="TBIPTV means The Best IPTV. An Xtream Codes and M3U player for Xbox and Windows. £2.99 once. No monthly subscription. No ads. No channels included.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://easalesltd.github.io/tbiptv-player/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TBIPTV — The Best IPTV player for Xbox and Microsoft">
+  <meta property="og:description" content="The Best IPTV player for Xbox and Windows. £2.99 once. No monthly subscription. No ads.">
+  <meta property="og:url" content="https://easalesltd.github.io/tbiptv-player/">
+  <meta property="og:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TBIPTV — The Best IPTV player for Xbox and Microsoft">
+  <meta name="twitter:description" content="The Best IPTV player for Xbox and Windows. £2.99 once. No monthly subscription. No ads.">
+  <meta name="twitter:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
   <meta name="theme-color" content="#0B0D12">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0D12'/%3E%3Cpath d='M26 18l22 14-22 14z' fill='%235A8EFF'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "TBIPTV",
+        "alternateName": ["The Best IPTV", "The Best IPTV player"],
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Xbox, Windows",
+        "description": "TBIPTV means The Best IPTV. It is a player for Xtream Codes and M3U playlists on Xbox and Windows. It does not include channels, films, series or subscriptions.",
+        "installUrl": "https://apps.microsoft.com/detail/9P69R4HTXG44",
+        "downloadUrl": "https://apps.microsoft.com/detail/9P69R4HTXG44",
+        "publisher": {
+          "@type": "Organization",
+          "name": "East Anglian Sales LTD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Langeydong"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "2.99",
+          "priceCurrency": "GBP",
+          "url": "https://apps.microsoft.com/detail/9P69R4HTXG44",
+          "availability": "https://schema.org/InStock",
+          "description": "£2.99 once. No monthly subscription."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does TBIPTV mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TBIPTV means The Best IPTV. It is a player for playlists you already have. It does not include any channels, films or series."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best IPTV player for Xbox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TBIPTV is The Best IPTV player for Xbox. Install it from the Microsoft Store, then add an Xtream Codes login or an M3U playlist from a service you are allowed to watch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best Xtream player?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TBIPTV is an Xtream Codes player for Xbox and Windows. Enter the server address, username and password from your provider, or paste the full link they sent you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best M3U player for Xbox?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TBIPTV plays M3U playlists on Xbox. Paste the M3U address from your provider. The same app is in the Microsoft Store for Windows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is TBIPTV on the Microsoft Store?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. TBIPTV is in the Microsoft Store for Xbox and for Windows. Search for TBIPTV, or open the Store page for product 9P69R4HTXG44."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does TBIPTV cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "£2.99 once. There is no monthly subscription and there are no ads. Want a feature? Send it from the TBIPTV website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does TBIPTV include channels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. TBIPTV does not include, sell or link to any channels, films, series or subscriptions. You add a playlist you are legally allowed to watch."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     :root {
       --bg: #0B0D12;
@@ -28,7 +133,8 @@
       line-height: 1.5;
     }
     a { color: var(--accent); }
-    .wrap { width: min(960px, calc(100% - 40px)); margin: 0 auto; }
+    img { max-width: 100%; height: auto; display: block; }
+    .wrap { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
     header {
       display: flex;
       align-items: center;
@@ -37,14 +143,11 @@
       padding: 22px 0;
     }
     .brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
-    .brand strong { font-size: 28px; letter-spacing: 0.02em; }
+    .brand strong { font-size: 28px; }
+    .brand span.meaning { display: block; color: var(--muted); font-size: 16px; font-weight: 600; }
     .mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--elevated);
-      display: grid;
-      place-items: center;
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--elevated); display: grid; place-items: center;
     }
     .btn {
       display: inline-block;
@@ -55,60 +158,96 @@
       font-size: 20px;
       padding: 14px 22px;
       border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
     }
     .btn:hover { filter: brightness(1.08); }
-    .btn.secondary {
-      background: var(--elevated);
-      color: var(--text);
-    }
+    .btn.secondary { background: var(--elevated); color: var(--text); }
     h1 {
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.1;
-      margin: 12px 0 16px;
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.08;
+      margin: 8px 0 16px;
       letter-spacing: -0.03em;
     }
-    .lede { font-size: 24px; max-width: 38rem; margin: 0 0 28px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    h2 { font-size: 32px; margin: 0 0 12px; }
+    h3 { margin: 0 0 6px; font-size: 22px; }
+    .lede { font-size: 23px; max-width: 42rem; margin: 0 0 24px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .hint { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
-    .hero { padding: 28px 0 12px; }
-    .notice, .card, .step {
+    .hero { padding: 18px 0 8px; }
+    .shot {
+      margin: 28px 0 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .shot figcaption, .tile figcaption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .notice, .card, .tile, .faq, form, .step {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
     }
-    .notice { padding: 18px 20px; margin: 36px 0; }
+    .notice { padding: 18px 20px; margin: 28px 0; }
     .notice strong { display: block; margin-bottom: 4px; }
-    h2 { font-size: 32px; margin: 0 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card, .faq { padding: 18px 20px; }
+    .card p, .faq p, .step p { margin: 0; color: var(--muted); }
+    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .tile { overflow: hidden; }
     .steps { display: grid; gap: 14px; }
-    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; }
+    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; }
     .num {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--accent); color: white;
+      display: grid; place-items: center; font-weight: 800;
     }
-    .step p { margin: 4px 0 0; color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .card { padding: 18px 20px; }
-    .card h3 { margin: 0 0 6px; font-size: 22px; }
-    .card p { margin: 0; color: var(--muted); }
-    section { padding: 18px 0 8px; }
+    section { padding: 22px 0 8px; }
+    form { padding: 18px 20px 20px; display: grid; gap: 14px; }
+    label { font-weight: 700; display: grid; gap: 8px; }
+    input, select, textarea {
+      width: 100%;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font: inherit;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fine { color: var(--muted); font-size: 17px; margin: 0; }
+    .price {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px;
+    }
+    .price li {
+      background: var(--elevated);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 700;
+    }
+    .price strong { color: white; font-size: 22px; }
     footer {
-      margin-top: 48px;
+      margin-top: 42px;
       padding: 28px 0 40px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 18px;
     }
     footer p { margin: 0 0 8px; }
-    @media (max-width: 700px) {
-      .grid { grid-template-columns: 1fr; }
+    @media (max-width: 800px) {
+      .grid, .shots, .form-row { grid-template-columns: 1fr; }
       header { align-items: flex-start; flex-direction: column; }
-      .lede { font-size: 21px; }
     }
   </style>
 </head>
@@ -119,26 +258,83 @@
         <span class="mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3.5l13 7.5-13 7.5z" fill="#5A8EFF"/></svg>
         </span>
-        <strong>TBIPTV</strong>
+        <strong>TBIPTV<span class="meaning">The Best IPTV</span></strong>
       </a>
       <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
     </header>
 
     <main id="top">
       <section class="hero">
-        <h1>A television player for playlists you already have.</h1>
-        <p class="lede">TBIPTV plays your own Xtream Codes login or M3U playlist on Xbox, with a layout made for the controller and a big screen.</p>
+        <p class="hint">For Xbox and Windows, from the Microsoft Store</p>
+        <h1>The Best IPTV player for Xbox.</h1>
+        <p class="lede">TBIPTV means The Best IPTV. It is the Xtream Codes and M3U player for Xbox, and the same app is in the Microsoft Store for Windows. You add a playlist you already have.</p>
+        <ul class="price">
+          <li><strong>£2.99</strong> once</li>
+          <li>No monthly subscription</li>
+          <li>No ads</li>
+          <li>No BS</li>
+        </ul>
         <div class="actions">
           <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get TBIPTV</a>
-          <a class="btn secondary" href="#start">How to start</a>
+          <a class="btn secondary" href="#shots">See the app</a>
+          <a class="btn secondary" href="#feedback">Want a feature? Let me know</a>
         </div>
-        <p class="hint">On your Xbox, open the Microsoft Store and search for TBIPTV.</p>
+        <p class="hint">On your Xbox, open the Microsoft Store and search for TBIPTV. Pay £2.99 once. That is the whole charge.</p>
+        <figure class="shot">
+          <img src="images/home.jpg" width="1400" height="788" alt="TBIPTV home screen on Xbox, The Best IPTV player, with continue watching, favourites and films">
+          <figcaption>Home on Xbox. Continue watching, favourites and films from your own playlist.</figcaption>
+        </figure>
       </section>
 
       <div class="notice">
         <strong>A player only.</strong>
-        TBIPTV does not include, sell or link to any channels, films, series or subscriptions. You add a playlist from a service you are allowed to watch.
+        TBIPTV does not include, sell or link to any channels, films, series or subscriptions. You add an Xtream Codes login or an M3U playlist from a service you are allowed to watch.
       </div>
+
+      <section>
+        <h2>Best IPTV, Xtream and M3U, on Xbox and Microsoft</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>The best IPTV player for Xbox</h3>
+            <p>TBIPTV is made for a television and an Xbox controller. Live TV, a guide, films and series stay readable from the sofa.</p>
+          </article>
+          <article class="card">
+            <h3>The best Xtream player</h3>
+            <p>Enter the server address, username and password from your provider, or paste the full Xtream link they sent you.</p>
+          </article>
+          <article class="card">
+            <h3>The best M3U player for Xbox</h3>
+            <p>An M3U address works as well. The same player is in the Microsoft Store, so it also runs on Windows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="shots">
+        <h2>See TBIPTV</h2>
+        <div class="shots">
+          <figure class="tile">
+            <img src="images/live-tv.jpg" width="1400" height="788" alt="Live TV in TBIPTV, categories and channels for an IPTV playlist on Xbox">
+            <figcaption>Live TV. Categories, channels and the guide when your playlist has one.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/movies.jpg" width="1400" height="788" alt="Films in The Best IPTV player on Xbox">
+            <figcaption>Films, with posters from the playlist you add.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/mini-player.jpg" width="1400" height="788" alt="TBIPTV mini player in the corner while browsing on Xbox">
+            <figcaption>Keep watching in the corner while you browse.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/film-details.jpg" width="1400" height="788" alt="Film details, plot and cast in the TBIPTV Xbox player">
+            <figcaption>Film details, with the plot and the cast.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/xtream-login.jpg" width="1400" height="788" alt="Xtream Codes and M3U login screen in TBIPTV">
+            <figcaption>Xtream Codes or an M3U address. Your login stays on the console.</figcaption>
+          </figure>
+        </div>
+        <p class="hint">Pictures use a test playlist. Big Buck Bunny and Tears of Steel are by the Blender Foundation, CC BY 3.0.</p>
+      </section>
 
       <section id="start">
         <h2>How to start</h2>
@@ -146,45 +342,80 @@
           <article class="step">
             <div class="num">1</div>
             <div>
-              <strong>Install it from the Store</strong>
-              <p>Search for TBIPTV on your Xbox, or use the button on this page from a phone or computer.</p>
+              <strong>Install it from the Microsoft Store</strong>
+              <p>Search for TBIPTV on Xbox, or on a Windows PC. One app covers both.</p>
             </div>
           </article>
           <article class="step">
             <div class="num">2</div>
             <div>
-              <strong>Add your playlist</strong>
-              <p>Type the server address, username and password from your provider, or paste the full link they sent you. An M3U address works too.</p>
+              <strong>Add your Xtream or M3U playlist</strong>
+              <p>Type the details from your provider, or paste the full link. Do not use the website where you pay unless that is the server address they gave you.</p>
             </div>
           </article>
           <article class="step">
             <div class="num">3</div>
             <div>
               <strong>Watch with the controller</strong>
-              <p>Live TV, a guide, films and series. Favourites, resume, and a small player in the corner while you browse.</p>
+              <p>Favourites, resume, and a small player in the corner while you look through the library.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section>
-        <h2>What it does</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Live TV</h3>
-            <p>Categories, channel names and a TV guide when your playlist includes one.</p>
+      <section id="feedback">
+        <h2>Want a feature? Let me know.</h2>
+        <p class="lede">Bug or idea, send it from here. No email address is shown, and none is asked for.</p>
+        <form id="feedback-form">
+          <div class="form-row">
+            <label>What is this?
+              <select id="kind" name="kind">
+                <option value="Bug">Bug report</option>
+                <option value="Feature">Feature request</option>
+              </select>
+            </label>
+            <label>Where were you?
+              <select id="device" name="device">
+                <option>Xbox</option>
+                <option>Windows</option>
+                <option>Xbox and Windows</option>
+              </select>
+            </label>
+          </div>
+          <label>What should we know?
+            <textarea id="message" name="message" required placeholder="What went wrong, or what should the app do? Leave out your password and playlist link."></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p class="fine" id="form-note">Send opens GitHub with your message ready to submit. You sign in there if you are asked. Your playlist password is not needed.</p>
+        </form>
+      </section>
+
+      <section id="questions">
+        <h2>Questions people ask</h2>
+        <div class="steps">
+          <article class="faq">
+            <h3>What does TBIPTV mean?</h3>
+            <p>The Best IPTV. It is a player. It does not come with channels.</p>
           </article>
-          <article class="card">
-            <h3>Films and series</h3>
-            <p>Posters, plots, cast and episode lists, with resume and the next episode.</p>
+          <article class="faq">
+            <h3>What is the best IPTV player for Xbox?</h3>
+            <p>TBIPTV. Install it from the Microsoft Store, then add the Xtream Codes or M3U playlist you are allowed to watch.</p>
           </article>
-          <article class="card">
-            <h3>Mini player</h3>
-            <p>Keep the picture in the corner while you look through the library.</p>
+          <article class="faq">
+            <h3>What is the best Xtream player?</h3>
+            <p>TBIPTV plays Xtream Codes on Xbox and on Windows. Use the server address, username and password from your provider.</p>
           </article>
-          <article class="card">
-            <h3>Private on your console</h3>
-            <p>Logins stay on the Xbox and are sent only to the server you enter. No account, adverts or tracking.</p>
+          <article class="faq">
+            <h3>What is the best M3U player for Xbox?</h3>
+            <p>TBIPTV plays an M3U playlist on Xbox. The Microsoft Store listing is the same app for a Windows PC.</p>
+          </article>
+          <article class="faq">
+            <h3>Is it on Microsoft as well as Xbox?</h3>
+            <p>Yes. Xbox and Windows both install TBIPTV from the Microsoft Store.</p>
+          </article>
+          <article class="faq">
+            <h3>How much is it?</h3>
+            <p>£2.99 once. No monthly subscription. No ads. No BS. Want a feature? Let me know.</p>
           </article>
         </div>
       </section>
@@ -192,9 +423,23 @@
 
     <footer>
       <p>Developed by Langeydong. Published by East Anglian Sales LTD.</p>
-      <p><a href="https://github.com/easalesltd/tbiptv-player/blob/main/PRIVACY.md">Privacy policy</a> · <a href="https://github.com/easalesltd/tbiptv-player/issues">Questions and support</a></p>
-      <p>© 2026 Langeydong. TBIPTV does not provide any content.</p>
+      <p><a href="https://github.com/easalesltd/tbiptv-player/blob/main/PRIVACY.md">Privacy policy</a> · <a href="#feedback">Bug reports and feature requests</a></p>
+      <p>© 2026 Langeydong. TBIPTV means The Best IPTV. It does not provide any content.</p>
     </footer>
   </div>
+  <script>
+    document.getElementById("feedback-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var kind = document.getElementById("kind").value;
+      var device = document.getElementById("device").value;
+      var message = document.getElementById("message").value.trim();
+      if (!message) return;
+      var title = kind + " (" + device + "): " + message.replace(/\s+/g, " ").slice(0, 72);
+      var body = "Type: " + kind + "\nDevice: " + device + "\n\n" + message + "\n";
+      var url = "https://github.com/easalesltd/tbiptv-player/issues/new?title="
+        + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
+      window.location.href = url;
+    });
+  </script>
 </body>
 </html>
