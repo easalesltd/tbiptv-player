@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://easalesltd.github.io/tbiptv-player/sitemap.xml
