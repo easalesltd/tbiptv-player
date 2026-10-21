@@ -1,0 +1,22 @@
+name: Bug report
+description: Something in TBIPTV is not working
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: device
+    attributes:
+      label: Where were you?
+      options:
+        - Xbox
+        - Windows
+        - Xbox and Windows
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What went wrong?
+      description: Leave out your password and playlist link.
+    validations:
+      required: true
