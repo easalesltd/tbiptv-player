@@ -1,4 +1,5 @@
+# Marketing pages stay off search. Sparkle does not use this host for updates.
 User-agent: *
-Allow: /
-
-Sitemap: https://easalesltd.github.io/tbiptv-player/sitemap.xml
+Disallow: /
+Allow: /appcast.xml
+Allow: /mac-latest.json
