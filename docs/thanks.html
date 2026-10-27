@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download TBIPTV for Mac</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0D12">
+  <link rel="canonical" href="https://easalesltd.github.io/tbiptv-player/thanks.html">
+  <style>
+    :root {
+      --bg: #0B0D12;
+      --surface: #14171E;
+      --elevated: #1E232D;
+      --text: #F0F0F0;
+      --muted: #949494;
+      --accent: #5A8EFF;
+      --line: #2A3140;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(720px, calc(100% - 40px)); margin: 0 auto; padding: 40px 0 64px; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 14px 22px;
+      border-radius: 10px;
+    }
+    .btn.secondary { background: var(--elevated); color: var(--text); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.03em; }
+    .lede { font-size: 22px; color: var(--muted); }
+    .hint { color: var(--muted); font-size: 18px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p><a href="./">TBIPTV</a></p>
+    <div id="paid" class="hidden">
+      <h1>Thanks. Here’s the Mac app.</h1>
+      <p class="lede">This file is always the latest version. TBIPTV is only a player. It doesn’t include channels.</p>
+      <p class="hint" id="version">Checking for the latest version…</p>
+      <div class="actions">
+        <a class="btn" id="download" href="https://github.com/easalesltd/tbiptv-player/releases/latest">Download TBIPTV for Mac</a>
+        <a class="btn secondary" href="./">Back to the site</a>
+      </div>
+      <div class="card">
+        <p>Drag TBIPTV into Applications. The first time, Control-click it and choose Open. After that, new versions arrive in the app.</p>
+      </div>
+    </div>
+    <div id="unpaid">
+      <h1>Pay for Mac first</h1>
+      <p class="lede">TBIPTV for Mac is £2.99 once. After you pay, this page gives you the latest download.</p>
+      <div class="actions">
+        <a class="btn" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">Buy for Mac · £2.99</a>
+        <a class="btn secondary" href="./">Back to the site</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var session = params.get("session_id") || "";
+      var paid = session.indexOf("cs_") === 0;
+      document.getElementById("paid").classList.toggle("hidden", !paid);
+      document.getElementById("unpaid").classList.toggle("hidden", paid);
+      if (!paid) return;
+      fetch("mac-latest.json", { cache: "no-store" })
+        .then(function (response) { if (!response.ok) throw new Error("latest"); return response.json(); })
+        .then(function (info) {
+          if (info.url) document.getElementById("download").href = info.url;
+          if (info.version) {
+            var label = "Latest version " + info.version;
+            if (info.minimumSystemVersion) label += " · macOS " + info.minimumSystemVersion + " or later";
+            document.getElementById("version").textContent = label;
+          }
+        })
+        .catch(function () {
+          document.getElementById("version").textContent = "If the version does not appear, use the download button anyway.";
+        });
+    })();
+  </script>
+</body>
+</html>
