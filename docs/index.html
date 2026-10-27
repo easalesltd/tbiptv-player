@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TBIPTV in the Microsoft Store for Xbox</title>
-  <meta name="description" content="TBIPTV means The Best IPTV. It is in the Microsoft Store for Xbox and plays an Xtream Codes or M3U playlist you already have. No content included.">
+  <title>TBIPTV for Xbox and Mac</title>
+  <meta name="description" content="TBIPTV means The Best IPTV. A player for an Xtream Codes or M3U playlist you already have, on Xbox or Mac. Xbox is £2.99 once. No content included.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://easalesltd.github.io/tbiptv-player/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="TBIPTV in the Microsoft Store for Xbox">
-  <meta property="og:description" content="TBIPTV means The Best IPTV. It is in the Microsoft Store for Xbox and plays an Xtream Codes or M3U playlist you already have. No content included.">
+  <meta property="og:title" content="TBIPTV for Xbox and Mac">
+  <meta property="og:description" content="TBIPTV means The Best IPTV. A player for an Xtream Codes or M3U playlist you already have, on Xbox or Mac. Xbox is £2.99 once. No content included.">
   <meta property="og:url" content="https://easalesltd.github.io/tbiptv-player/">
   <meta property="og:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TBIPTV in the Microsoft Store for Xbox">
-  <meta name="twitter:description" content="TBIPTV means The Best IPTV. It is in the Microsoft Store for Xbox and plays an Xtream Codes or M3U playlist you already have. No content included.">
+  <meta name="twitter:title" content="TBIPTV for Xbox and Mac">
+  <meta name="twitter:description" content="TBIPTV means The Best IPTV. A player for an Xtream Codes or M3U playlist you already have, on Xbox or Mac. Xbox is £2.99 once. No content included.">
   <meta name="twitter:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
   <meta name="theme-color" content="#0B0D12">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0D12'/%3E%3Cpath d='M26 18l22 14-22 14z' fill='%235A8EFF'/%3E%3C/svg%3E">
@@ -26,11 +26,11 @@
         "@type": "SoftwareApplication",
         "name": "TBIPTV",
         "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Xbox, Windows",
+        "operatingSystem": "Xbox, Windows, macOS",
         "alternateName": "The Best IPTV",
-        "description": "TBIPTV means The Best IPTV. It is an Xbox player for an Xtream Codes or M3U playlist. It does not include any channels, films, series or subscriptions.",
+        "description": "TBIPTV means The Best IPTV. It is a player for an Xtream Codes or M3U playlist on Xbox or Mac. It does not include any channels, films, series or subscriptions.",
         "installUrl": "https://apps.microsoft.com/detail/9P69R4HTXG44",
-        "downloadUrl": "https://apps.microsoft.com/detail/9P69R4HTXG44",
+        "downloadUrl": "https://github.com/easalesltd/tbiptv-player/releases/latest",
         "publisher": {
           "@type": "Organization",
           "name": "East Anglian Sales LTD"
@@ -64,7 +64,7 @@
             "name": "How much does TBIPTV cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "£2.99 once. There is no monthly subscription."
+              "text": "Xbox is £2.99 once in the Microsoft Store. There is no monthly subscription. The Mac player on this page is always the latest version."
             }
           },
           {
@@ -72,7 +72,7 @@
             "name": "What does TBIPTV stand for?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Best IPTV. TBIPTV is an Xbox player in the Microsoft Store. It plays an Xtream Codes login, also written Xstream, or an M3U playlist you already have."
+              "text": "The Best IPTV. TBIPTV is a player for Xbox and Mac. It plays an Xtream Codes login, also written Xstream, or an M3U playlist you already have."
             }
           },
           {
@@ -89,6 +89,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "TBIPTV is in the Microsoft Store for Xbox. On the console, open the Store and search for TBIPTV. On a phone or computer, open https://apps.microsoft.com/detail/9P69R4HTXG44."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a Mac version?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. This page always offers the latest Mac version. After you install it, TBIPTV can pick up newer versions itself. It plays the Xtream Codes or M3U playlist you already have. It does not include channels."
             }
           }
         ]
@@ -172,7 +180,7 @@
       color: var(--muted);
       font-size: 17px;
     }
-    .notice, .card, .tile, .faq, form, .step {
+    .notice, .card, .tile, .faq, form, .step, .platform {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -222,6 +230,13 @@
       font-weight: 700;
     }
     .price strong { color: white; font-size: 22px; }
+    .header-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .platforms { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .platform { padding: 18px 20px; }
+    .platform .btn { margin-top: 14px; }
+    .platform p { margin: 0 0 10px; color: var(--muted); }
+    .version-line { color: var(--muted); font-size: 17px; margin: 0 0 8px; }
+    .notes-line { color: var(--text); font-size: 17px; margin: 0; white-space: pre-line; }
     footer {
       margin-top: 42px;
       padding: 28px 0 40px;
@@ -231,7 +246,7 @@
     }
     footer p { margin: 0 0 8px; }
     @media (max-width: 800px) {
-      .grid, .shots, .form-row { grid-template-columns: 1fr; }
+      .grid, .shots, .form-row, .platforms { grid-template-columns: 1fr; }
       header { align-items: flex-start; flex-direction: column; }
     }
   </style>
@@ -245,19 +260,23 @@
         </span>
         <strong>TBIPTV</strong>
       </a>
-      <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
+      <div class="header-actions">
+        <a class="btn secondary" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
+        <a class="btn" data-mac-download href="#get">Get it for Mac</a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <h1>Your own IPTV playlist, on your Xbox</h1>
-        <p class="lede">TBIPTV means The Best IPTV. It is a simple player for an Xtream Codes login, also written Xstream, or an M3U playlist. It's built for a controller and a TV, so you're not squinting at a tiny phone-style menu from the sofa.</p>
-        <p class="lede">£2.99 once. No monthly subscription.</p>
+        <h1>Your own IPTV playlist, on Xbox or Mac</h1>
+        <p class="lede">TBIPTV means The Best IPTV. It is a simple player for an Xtream Codes login, also written Xstream, or an M3U playlist. On Xbox it is built for a controller and a TV. On Mac it is the same player for a keyboard and a mouse.</p>
+        <p class="lede">Xbox is £2.99 once. No monthly subscription.</p>
         <div class="actions">
-          <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get TBIPTV</a>
+          <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
+          <a class="btn secondary" data-mac-download href="#get">Get it for Mac</a>
           <a class="btn secondary" href="#start">How to start</a>
         </div>
-        <p class="hint">TBIPTV is listed in the <a href="https://apps.microsoft.com/detail/9P69R4HTXG44">Microsoft Store</a>. On an Xbox, open the Store and search for TBIPTV.</p>
+        <p class="hint">On an Xbox, open the Store and search for TBIPTV. On a Mac, the button here always downloads the latest version.</p>
         <figure class="shot">
           <img src="images/home.jpg" width="1400" height="788" alt="TBIPTV home screen on Xbox">
           <figcaption>The home screen, from the sofa.</figcaption>
@@ -269,6 +288,25 @@
         TBIPTV is only a player. It doesn't come with any channels, films, series or subscriptions, and it doesn't sell or link to any. You bring a playlist from a service you're legitimately allowed to watch.
       </div>
 
+      <section id="get">
+        <h2>Xbox or Mac</h2>
+        <div class="platforms">
+          <article class="platform">
+            <h3>Xbox</h3>
+            <p>£2.99 once in the Microsoft Store. Built for a controller and a TV.</p>
+            <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">Get it on Xbox</a>
+          </article>
+          <article class="platform">
+            <h3>Mac</h3>
+            <p>macOS 14 or later, Apple Silicon or Intel. This page always offers the same latest version the app uses for updates.</p>
+            <p class="version-line" data-mac-version>Checking for the latest version…</p>
+            <p class="notes-line" data-mac-notes hidden></p>
+            <a class="btn" data-mac-download href="https://github.com/easalesltd/tbiptv-player/releases/latest">Download TBIPTV for Mac</a>
+            <p class="hint">Drag it into Applications, then Control-click TBIPTV and choose Open the first time. After that, new versions arrive in the app.</p>
+          </article>
+        </div>
+      </section>
+
       <section id="start">
         <h2>Getting started</h2>
         <div class="steps">
@@ -276,7 +314,7 @@
             <div class="num">1</div>
             <div>
               <strong>Install it</strong>
-              <p>Search for TBIPTV in the Store on your Xbox. If you're on a phone or computer, the button above takes you straight to the listing.</p>
+              <p>On Xbox, search for TBIPTV in the Store. On a Mac, download it from this page — that file is always the latest version.</p>
             </div>
           </article>
           <article class="step">
@@ -321,7 +359,7 @@
           </article>
           <article class="card">
             <h3>Private by design</h3>
-            <p>Your login stays on your Xbox and only goes to the server you typed in. The channel list is kept on the console, so the next time you open the app it comes up faster. There's no account to create, no adverts and no tracking.</p>
+            <p>Your login stays on your Xbox or Mac and only goes to the server you typed in. The channel list is kept on the device, so the next time you open the app it comes up faster. There's no account to create, no adverts and no tracking.</p>
           </article>
         </div>
         <div class="shots">
@@ -363,6 +401,7 @@
             <label>Where were you?
               <select id="device" name="device">
                 <option>Xbox</option>
+                <option>Mac</option>
                 <option>Windows</option>
                 <option>Xbox and Windows</option>
               </select>
@@ -385,6 +424,51 @@
     </footer>
   </div>
   <script>
+    (function () {
+      var buttons = document.querySelectorAll("[data-mac-download]");
+      var versionEl = document.querySelector("[data-mac-version]");
+      var notesEl = document.querySelector("[data-mac-notes]");
+      function applyLatest(info) {
+        if (!info || !info.url) return;
+        buttons.forEach(function (link) { link.href = info.url; });
+        if (versionEl && info.version) {
+          var label = "Latest version " + info.version;
+          if (info.minimumSystemVersion) label += " · macOS " + info.minimumSystemVersion + " or later";
+          versionEl.textContent = label;
+        }
+        if (notesEl && info.notes) {
+          notesEl.hidden = false;
+          notesEl.textContent = info.notes;
+        }
+      }
+      function fromAppcast(xml) {
+        var item = xml.querySelector("item");
+        if (!item) return null;
+        var enclosure = item.querySelector("enclosure");
+        var version = item.getElementsByTagName("sparkle:shortVersionString")[0]
+          || item.querySelector("shortVersionString");
+        var minimum = item.getElementsByTagName("sparkle:minimumSystemVersion")[0]
+          || item.querySelector("minimumSystemVersion");
+        var description = item.querySelector("description");
+        return {
+          url: enclosure && enclosure.getAttribute("url"),
+          version: version && version.textContent.trim(),
+          minimumSystemVersion: minimum && minimum.textContent.trim(),
+          notes: description && description.textContent.trim()
+        };
+      }
+      fetch("mac-latest.json", { cache: "no-store" })
+        .then(function (response) { if (!response.ok) throw new Error("latest"); return response.json(); })
+        .then(applyLatest)
+        .catch(function () {
+          return fetch("https://raw.githubusercontent.com/easalesltd/tbiptv-player/main/docs/appcast.xml", { cache: "no-store" })
+            .then(function (response) { if (!response.ok) throw new Error("appcast"); return response.text(); })
+            .then(function (text) { applyLatest(fromAppcast(new DOMParser().parseFromString(text, "text/xml"))); });
+        })
+        .catch(function () {
+          if (versionEl) versionEl.textContent = "Open the latest Mac release if the version does not appear here.";
+        });
+    })();
     document.getElementById("feedback-form").addEventListener("submit", function (event) {
       event.preventDefault();
       var kind = document.getElementById("kind").value;
