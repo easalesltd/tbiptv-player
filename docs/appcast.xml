@@ -3,14 +3,15 @@
     <channel>
         <title>TBIPTV</title>
         <item>
-            <title>1.24</title>
-            <pubDate>Thu, 29 Oct 2026 16:56:44 +0000</pubDate>
+            <title>1.25</title>
+            <pubDate>Thu, 29 Oct 2026 21:59:45 +0000</pubDate>
             <link>https://github.com/easalesltd/tbiptv-player/releases</link>
-            <sparkle:version>25</sparkle:version>
-            <sparkle:shortVersionString>1.24</sparkle:shortVersionString>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>1.25</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[**What’s new**
 
+- If a film or episode pauses to buffer, it carries on from the same place instead of jumping back to the start
 - Home opens without freezing on a large playlist
 - Last channel and the TV guide wait until the window is ready to use
 - Home no longer freezes while live sports, films and the player all update at once
@@ -21,7 +22,7 @@
 - While you watch, you can search channels, open recent channels, lock the controls, and see stream info
 - Live picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts
 ]]></description>
-            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.24/TBIPTV-1.24.dmg" length="40758813" type="application/octet-stream" sparkle:edSignature="k4JUtDrQ+og5cHkEt6wOP7/WdGqlkORQOdlYC3y9okHgoNyyv7oylz41n8z/+dTsfdod1DehWqg1Z0ANrsEUAQ=="/>
+            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.25/TBIPTV-1.25.dmg" length="40629718" type="application/octet-stream" sparkle:edSignature="iwf9AQ9lIs1hPlBTK8oWISJvA3kDOMmk7JQxEDHyFXuDlXfcmQOevufE9iCufqq7lcaSzVG81y1wI0xTUhFPBw=="/>
         </item>
     </channel>
 </rss>
