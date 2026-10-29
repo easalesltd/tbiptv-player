@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Best IPTV (TBIPTV) for Xbox, Windows and Mac</title>
-  <meta name="description" content="TBIPTV means The Best IPTV: an Xstream or M3U player for Xbox, Windows and Mac. Live TV, films, series and sport. £2.99 once. No channels included.">
+  <title>TBIPTV for Xbox and Mac</title>
+  <meta name="description" content="TBIPTV is a player for an Xtream or M3U playlist you already have, on Xbox or Mac. £2.99 once. No channels included.">
   <link rel="canonical" href="https://easalesltd.github.io/tbiptv-player/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Best IPTV (TBIPTV) for Xbox, Windows and Mac">
-  <meta property="og:description" content="TBIPTV means The Best IPTV: an Xstream or M3U player for Xbox, Windows and Mac. Live TV, films, series and sport. £2.99 once. No channels included.">
+  <meta property="og:title" content="TBIPTV for Xbox and Mac">
+  <meta property="og:description" content="A player for an Xtream or M3U playlist you already have. £2.99 once. No channels included.">
   <meta property="og:url" content="https://easalesltd.github.io/tbiptv-player/">
   <meta property="og:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Best IPTV (TBIPTV) for Xbox, Windows and Mac">
-  <meta name="twitter:description" content="TBIPTV means The Best IPTV: an Xstream or M3U player for Xbox, Windows and Mac. Live TV, films, series and sport. £2.99 once. No channels included.">
+  <meta name="twitter:title" content="TBIPTV for Xbox and Mac">
+  <meta name="twitter:description" content="A player for an Xtream or M3U playlist you already have. £2.99 once. No channels included.">
   <meta name="twitter:image" content="https://easalesltd.github.io/tbiptv-player/images/home.jpg">
   <meta name="theme-color" content="#0B0D12">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0D12'/%3E%3Cpath d='M26 18l22 14-22 14z' fill='%235A8EFF'/%3E%3C/svg%3E">
@@ -24,21 +24,9 @@
       {
         "@type": "SoftwareApplication",
         "name": "TBIPTV",
-        "alternateName": "The Best IPTV",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Xbox, Windows, macOS",
-        "description": "TBIPTV means The Best IPTV. It plays an Xstream or M3U playlist you already have on Xbox, Windows or Mac. It does not include channels.",
-        "featureList": [
-          "Xstream Codes and M3U login",
-          "Live TV with categories, a guide, catch-up and reminders",
-          "Hide anything that is not FHD",
-          "Films and series with posters, cast, plot, resume and the next episode",
-          "Trailers in the app when the playlist has one",
-          "Sport grouped by sport, country and league",
-          "Mini player with speed, soundtrack, subtitles and picture fit",
-          "PIN-locked or hidden categories, favourite folders and search"
-        ],
-        "keywords": "The Best IPTV, Xstream, M3U, Xbox, Windows, Mac, live TV, films, series, sport",
+        "description": "TBIPTV is a player for an Xtream or M3U playlist you already have, on Xbox or Mac. It does not include channels.",
         "url": "https://easalesltd.github.io/tbiptv-player/",
         "installUrl": "https://apps.microsoft.com/detail/9P69R4HTXG44",
         "downloadUrl": "https://github.com/easalesltd/tbiptv-player/releases/latest",
@@ -47,7 +35,7 @@
         "offers": [
           {
             "@type": "Offer",
-            "name": "Xbox and Windows",
+            "name": "Xbox",
             "price": "2.99",
             "priceCurrency": "GBP",
             "url": "https://apps.microsoft.com/detail/9P69R4HTXG44",
@@ -60,27 +48,6 @@
             "priceCurrency": "GBP",
             "url": "https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00",
             "availability": "https://schema.org/InStock"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Does it include channels?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. You need a playlist from a service you’re allowed to use."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Mac says it can’t verify the app.",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Drag the app into Applications. Then open System Settings → Privacy & Security and choose Open Anyway. Works on Apple Silicon and Intel, macOS 14 or later."
-            }
           }
         ]
       }
@@ -140,8 +107,8 @@
       font-family: inherit;
     }
     .btn svg { width: 22px; height: 22px; flex-shrink: 0; fill: currentColor; }
-    .marks { display: inline-flex; align-items: center; gap: 6px; }
     .btn:hover { filter: brightness(1.08); }
+    .btn.secondary { background: var(--elevated); color: var(--text); }
     h1 {
       font-size: clamp(36px, 6vw, 56px);
       line-height: 1.08;
@@ -152,8 +119,8 @@
     h3 { margin: 0 0 6px; font-size: 22px; }
     .lede { font-size: 23px; max-width: 40rem; margin: 0 0 24px; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hint { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
     .hero { padding: 18px 0 8px; }
-    figure { margin: 0; }
     .shot {
       margin: 28px 0 0;
       background: var(--surface);
@@ -161,22 +128,25 @@
       border-radius: 16px;
       overflow: hidden;
     }
-    .card, .tile, form, .step {
+    .shot figcaption, .tile figcaption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .notice, .card, .tile, form, .step, .platform {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
     }
+    .notice { padding: 18px 20px; margin: 28px 0; }
+    .notice strong { display: block; margin-bottom: 4px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .card { padding: 18px 20px; }
-    .card p { margin: 0; color: var(--muted); }
-    .step p { margin: 0; }
-    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card p, .step p { margin: 0; color: var(--muted); }
+    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
     .tile { overflow: hidden; }
-    .stack { display: grid; gap: 22px; }
-    .feature { display: grid; gap: 14px; }
-    .feature .shot { margin: 0; }
-    .why { margin: 22px 0 0; max-width: 40rem; }
     .steps { display: grid; gap: 14px; }
-    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; }
     .num {
       width: 42px; height: 42px; border-radius: 50%;
       background: var(--accent); color: white;
@@ -197,6 +167,12 @@
     textarea { min-height: 140px; resize: vertical; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .fine { color: var(--muted); font-size: 17px; margin: 0; }
+    .header-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .platforms { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .platform { padding: 18px 20px; }
+    .platform .btn { margin-top: 14px; }
+    .platform p { margin: 0 0 10px; color: var(--muted); }
+    .version-line { color: var(--muted); font-size: 17px; margin: 0 0 8px; }
     footer {
       margin-top: 42px;
       padding: 28px 0 40px;
@@ -206,7 +182,8 @@
     }
     footer p { margin: 0 0 8px; }
     @media (max-width: 800px) {
-      .shots, .form-row { grid-template-columns: 1fr; }
+      .grid, .shots, .form-row, .platforms { grid-template-columns: 1fr; }
+      header { align-items: flex-start; flex-direction: column; }
     }
   </style>
 </head>
@@ -219,117 +196,152 @@
         </span>
         <strong>TBIPTV</strong>
       </a>
+      <div class="header-actions">
+        <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
+          Xbox · £2.99
+        </a>
+        <a class="btn" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          Mac · £2.99
+        </a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <h1>A player for the playlist you already have</h1>
-        <p class="lede">TBIPTV plays your own Xstream or M3U login on Xbox, Windows or Mac. It comes with no channels, and you pay £2.99 once, with no subscription.</p>
+        <h1>Your playlist, on Xbox or Mac</h1>
+        <p class="lede">TBIPTV is a player. You add the Xtream or M3U login you already have. It does not come with channels.</p>
+        <p class="lede">£2.99 once on Xbox or Mac. No monthly fee.</p>
         <div class="actions">
           <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">
-            <span class="marks">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8.2v8.2H3V3zm9.8 0H21v8.2h-8.2V3zM3 12.8h8.2V21H3v-8.2zm9.8 0H21V21h-8.2v-8.2z"/></svg>
-            </span>
-            Xbox &amp; Windows
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
+            Xbox · £2.99
           </a>
           <a class="btn" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
-            Mac: buy and download
+            Mac · £2.99
           </a>
+          <a class="btn secondary" href="#start">How to start</a>
         </div>
+        <p class="hint">Xbox: Microsoft Store. Mac: pay here, then download. Same £2.99 on both.</p>
         <figure class="shot">
           <img src="images/home.jpg" width="1400" height="788" alt="TBIPTV home screen on Xbox">
+          <figcaption>Home, from the sofa.</figcaption>
         </figure>
       </section>
 
-      <section>
-        <h2>How it works</h2>
+      <div class="notice">
+        <strong>No channels in the app.</strong>
+        TBIPTV does not include films, series or live TV, and it does not sell them. You add a playlist from a service you are allowed to use.
+      </div>
+
+      <section id="get">
+        <h2>Xbox or Mac</h2>
+        <div class="platforms">
+          <article class="platform">
+            <h3>Xbox</h3>
+            <p>£2.99 once in the Microsoft Store. Made for a TV and a controller.</p>
+            <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
+              Xbox · £2.99
+            </a>
+          </article>
+          <article class="platform">
+            <h3>Mac</h3>
+            <p>£2.99 once. Works on Apple Silicon and Intel, macOS 14 or later.</p>
+            <p class="version-line" data-mac-version></p>
+            <a class="btn" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              Mac · £2.99
+            </a>
+            <p class="hint">After you pay, drag the app into Applications. The first time, macOS may say it could not verify the app. Open System Settings → Privacy &amp; Security and choose Open Anyway.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="start">
+        <h2>Getting started</h2>
         <div class="steps">
           <article class="step">
             <div class="num">1</div>
-            <p>Install it.</p>
+            <div>
+              <strong>Get the app</strong>
+              <p>Xbox: Microsoft Store. Mac: pay with the button above, then download. Both are £2.99 once.</p>
+            </div>
           </article>
           <article class="step">
             <div class="num">2</div>
-            <p>Enter the server, username and password from your provider, or paste an M3U link.</p>
+            <div>
+              <strong>Add your playlist</strong>
+              <p>Type the server, username and password your provider gave you, or paste an M3U link.</p>
+            </div>
           </article>
           <article class="step">
             <div class="num">3</div>
-            <p>Pick something and press play.</p>
+            <div>
+              <strong>Watch</strong>
+              <p>Pick a channel, a film or an episode and play.</p>
+            </div>
           </article>
         </div>
-        <p class="why">A friend told me there were no good IPTV apps for Xbox or Mac, so I made them.</p>
-        <figure class="shot">
-          <img src="images/xstream-login.jpg" width="1400" height="788" alt="Adding an Xstream Codes or M3U playlist in TBIPTV">
-        </figure>
       </section>
 
       <section>
-        <h2>What it does</h2>
-        <div class="stack">
-          <div class="feature">
-            <article class="card">
-              <h3>Live TV</h3>
-              <p>Categories and a guide, catch-up where your playlist supports it, and reminders before a programme starts. You can hide anything that isn’t FHD.</p>
-            </article>
-            <figure class="shot">
-              <img src="images/live-tv.jpg" width="1400" height="788" alt="Live TV in TBIPTV">
-            </figure>
-          </div>
-          <div class="feature">
-            <article class="card">
-              <h3>Films and series</h3>
-              <p>Posters, cast and plot, resume where you stopped, and the next episode offered. Trailers play in-app if the playlist has one.</p>
-            </article>
-            <div class="shots">
-              <figure class="tile">
-                <img src="images/movies.jpg" width="1400" height="788" alt="Films in TBIPTV">
-              </figure>
-              <figure class="tile">
-                <img src="images/film-details.jpg" width="1400" height="788" alt="A film’s details in TBIPTV">
-              </figure>
-            </div>
-          </div>
+        <h2>What you get</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Live TV</h3>
+            <p>Channels in categories, plus a TV guide if your playlist has one. You can hide anything that isn’t marked FHD, watch something again when the playlist keeps it, and get a reminder shortly before a programme starts.</p>
+          </article>
+          <article class="card">
+            <h3>Films and series</h3>
+            <p>Posters, plot, cast and episodes. Home can list films and series that are popular right now, but only if they are already in your playlist. It remembers where you stopped and offers the next episode. If the playlist has a trailer, it plays in the app.</p>
+          </article>
           <article class="card">
             <h3>Sport</h3>
-            <p>Channels grouped by sport, country and league, taken from the channel name and guide. A match starting within two hours counts as on now.</p>
-          </article>
-          <div class="feature">
-            <article class="card">
-              <h3>Everything else</h3>
-              <p>A mini player while you browse (with speed, soundtrack, subtitles and picture fit on films and catch-up), PIN-locked or hidden categories, favourite folders, and typo-tolerant search that finds actors too.</p>
-            </article>
-            <figure class="shot">
-              <img src="images/mini-player.jpg" width="1400" height="788" alt="TBIPTV mini player">
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Privacy</h2>
-        <article class="card">
-          <p>Your login goes only to the server you entered. No TBIPTV account, no ads, no tracking.</p>
-        </article>
-      </section>
-
-      <section>
-        <h2>FAQ</h2>
-        <div class="stack">
-          <article class="card">
-            <h3>Does it include channels?</h3>
-            <p>No. You need a playlist from a service you’re allowed to use.</p>
+            <p>What’s on, grouped by sport, country and league from the channel name and the guide. A match starting within two hours still counts as on now.</p>
           </article>
           <article class="card">
-            <h3>Mac says it can’t verify the app.</h3>
-            <p>Drag the app into Applications. Then open System Settings → Privacy &amp; Security and choose Open Anyway. Works on Apple Silicon and Intel, macOS 14 or later.</p>
+            <h3>Mini player</h3>
+            <p>Keep watching in the corner while you browse. While a stream plays you can search channels, jump back through recent channels, lock the controls, and see stream info. On films and catch-up you can change speed, soundtrack, subtitles and how the picture fits.</p>
+          </article>
+          <article class="card">
+            <h3>Favourites and search</h3>
+            <p>Save channels to folders, hide or PIN-lock categories, and search even if a letter is wrong. Search can find an actor too.</p>
+          </article>
+          <article class="card">
+            <h3>Stays on your device</h3>
+            <p>Your login only goes to the server you typed in. There is no TBIPTV account, no ads and no tracking.</p>
           </article>
         </div>
+        <div class="shots">
+          <figure class="tile">
+            <img src="images/live-tv.jpg" width="1400" height="788" alt="Live TV in TBIPTV">
+            <figcaption>Live TV, with a guide when the playlist has one.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/movies.jpg" width="1400" height="788" alt="Films in TBIPTV">
+            <figcaption>Films, with posters from the playlist.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/mini-player.jpg" width="1400" height="788" alt="TBIPTV mini player">
+            <figcaption>The picture stays in the corner while you browse.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/film-details.jpg" width="1400" height="788" alt="A film's details in TBIPTV">
+            <figcaption>Plot, cast and play.</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/xtream-login.jpg" width="1400" height="788" alt="Adding an Xtream Codes or M3U playlist in TBIPTV">
+            <figcaption>Xtream or an M3U address.</figcaption>
+          </figure>
+        </div>
+        <p class="hint">Pictures use a test playlist. Big Buck Bunny and Tears of Steel are by the Blender Foundation, CC BY 3.0.</p>
       </section>
 
       <section id="feedback">
-        <h2>Bug or idea?</h2>
+        <h2>A bug or an idea?</h2>
         <p class="lede">Send it from here. Don’t include your playlist password.</p>
         <form id="feedback-form">
           <div class="form-row">
@@ -360,10 +372,20 @@
       <p>Developed by Langeydong. Published by East Anglian Sales LTD.</p>
       <p><a href="https://github.com/easalesltd/tbiptv-player/blob/main/PRIVACY.md">Privacy policy</a> · <a href="#feedback">Questions and support</a></p>
       <p>© 2026 Langeydong. TBIPTV does not provide any content.</p>
-      <p>Screenshots use a test playlist. Big Buck Bunny and Tears of Steel are by the Blender Foundation, CC BY 3.0.</p>
     </footer>
   </div>
   <script>
+    (function () {
+      var versionEl = document.querySelector("[data-mac-version]");
+      function showVersion(info) {
+        if (!versionEl || !info || !info.version) return;
+        versionEl.textContent = "Current download: " + info.version;
+      }
+      fetch("mac-latest.json", { cache: "no-store" })
+        .then(function (response) { if (!response.ok) throw new Error("latest"); return response.json(); })
+        .then(showVersion)
+        .catch(function () {});
+    })();
     document.getElementById("feedback-form").addEventListener("submit", function (event) {
       event.preventDefault();
       var kind = document.getElementById("kind").value;
