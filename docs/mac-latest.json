@@ -1,9 +1,9 @@
 {
-  "version": "1.25",
-  "build": "26",
-  "url": "https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.25/TBIPTV-1.25.dmg",
-  "size": 40629718,
+  "version": "1.26",
+  "build": "27",
+  "url": "https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.26/TBIPTV-1.26.dmg",
+  "size": 40667534,
   "minimumSystemVersion": "14.0",
-  "notes": "****\n- If a film or episode pauses to buffer, it carries on from the same place instead of jumping back to the start\n- Home opens without freezing on a large playlist\n- Last channel and the TV guide wait until the window is ready to use\n- Home no longer freezes while live sports, films and the player all update at once\n- When an episode finishes, the next one can start on its own\n- Settings can pick a preferred soundtrack and subtitle language\n- Playlist names can hide extra tags such as 4K and FHD\n- Home can show trending films and series that are already in your playlist\n- While you watch, you can search channels, open recent channels, lock the controls, and see stream info\n- Live picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts",
-  "published": "Thu, 29 Oct 2026 21:59:45 +0000"
+  "notes": "****\n- When an episode finishes, the next one in the series starts\n- Near the end, Up next names that episode so you can play it now or skip it\n- If a film or episode pauses to buffer, it carries on from the same place instead of jumping back to the start\n- Home opens without freezing on a large playlist\n- Last channel and the TV guide wait until the window is ready to use\n- Home no longer freezes while live sports, films and the player all update at once\n- When an episode finishes, the next one can start on its own\n- Settings can pick a preferred soundtrack and subtitle language\n- Playlist names can hide extra tags such as 4K and FHD\n- Home can show trending films and series that are already in your playlist\n- While you watch, you can search channels, open recent channels, lock the controls, and see stream info\n- Live picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts",
+  "published": "Thu, 29 Oct 2026 22:07:27 +0000"
 }
