@@ -3,14 +3,16 @@
     <channel>
         <title>TBIPTV</title>
         <item>
-            <title>1.25</title>
-            <pubDate>Thu, 29 Oct 2026 21:59:45 +0000</pubDate>
+            <title>1.26</title>
+            <pubDate>Thu, 29 Oct 2026 22:07:27 +0000</pubDate>
             <link>https://github.com/easalesltd/tbiptv-player/releases</link>
-            <sparkle:version>26</sparkle:version>
-            <sparkle:shortVersionString>1.25</sparkle:shortVersionString>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>1.26</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[**What’s new**
 
+- When an episode finishes, the next one in the series starts
+- Near the end, Up next names that episode so you can play it now or skip it
 - If a film or episode pauses to buffer, it carries on from the same place instead of jumping back to the start
 - Home opens without freezing on a large playlist
 - Last channel and the TV guide wait until the window is ready to use
@@ -22,7 +24,7 @@
 - While you watch, you can search channels, open recent channels, lock the controls, and see stream info
 - Live picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts
 ]]></description>
-            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.25/TBIPTV-1.25.dmg" length="40629718" type="application/octet-stream" sparkle:edSignature="iwf9AQ9lIs1hPlBTK8oWISJvA3kDOMmk7JQxEDHyFXuDlXfcmQOevufE9iCufqq7lcaSzVG81y1wI0xTUhFPBw=="/>
+            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.26/TBIPTV-1.26.dmg" length="40667534" type="application/octet-stream" sparkle:edSignature="FBrLE2TUDxk99eAMDgdrKBQNUXWh/DMFv1wMsmUOdMIGoSWT3uPg6+yItBUnHfqylgk3vC6AiZyjXixSKOTODg=="/>
         </item>
     </channel>
 </rss>
