@@ -3,15 +3,18 @@
     <channel>
         <title>TBIPTV</title>
         <item>
-            <title>1.20</title>
-            <pubDate>Tue, 27 Oct 2026 17:33:59 +0000</pubDate>
+            <title>1.21</title>
+            <pubDate>Thu, 29 Oct 2026 15:59:35 +0000</pubDate>
             <link>https://github.com/easalesltd/tbiptv-player/releases</link>
-            <sparkle:version>21</sparkle:version>
-            <sparkle:shortVersionString>1.20</sparkle:shortVersionString>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.21</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[- TBIPTV checks for a new version when it opens, and only tells you if one is ready
+            <description><![CDATA[<div style="font: 15px/1.45 -apple-system, BlinkMacSystemFont, sans-serif; color: #1d1d1f;">
+<p><strong>What’s new</strong></p>
+<ul><li>Home can show trending films and series that are already in your playlist</li><li>While you watch, you can search channels, open recent channels, lock the controls, and see stream info</li><li>Live picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts</li></ul>
+</div>
 ]]></description>
-            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.20/TBIPTV-1.20.dmg" length="40409638" type="application/octet-stream" sparkle:edSignature="qmICj1fI6srKKSePPGP8DsgARydbtrnQ2bcmh1P3KoHi1jH6kOpHQgFLZD6q8C1AgHcNgrul8l6xZlHCYoWNBg=="/>
+            <enclosure url="https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.21/TBIPTV-1.21.dmg" length="40563887" type="application/octet-stream" sparkle:edSignature="HsHSN8zcU+7SYQH0e8E+cE8oqidaqJJs9pAdTsiTj71Hg2+PMiiPMqAKk6QL4cGt/I5HnZahnj7kJKhc0bflCA=="/>
         </item>
     </channel>
 </rss>
