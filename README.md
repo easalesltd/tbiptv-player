@@ -1,6 +1,6 @@
 # TBIPTV
 
-TBIPTV is a media player for Xbox that plays IPTV playlists you already have (Xtream Codes logins and M3U playlists).
+TBIPTV is a media player for Xbox that plays IPTV playlists you already have (Xstream Codes logins and M3U playlists).
 
 **It does not include, sell or link to any channels, films, series or subscriptions.** Users add playlists from services they are legally entitled to watch.
 

@@ -6,7 +6,7 @@ TBIPTV ("the app") is developed by Langeydong as a personal, non-commercial proj
 
 ## What the app is
 
-TBIPTV is a media player. It does not include, sell, host or link to any channels, films, series or subscriptions. To use it you add a playlist (an Xtream Codes login or an M3U address) from a service you are legally entitled to watch.
+TBIPTV is a media player. It does not include, sell, host or link to any channels, films, series or subscriptions. To use it you add a playlist (an Xstream Codes login or an M3U address) from a service you are legally entitled to watch.
 
 ## Information stored on your device
 
