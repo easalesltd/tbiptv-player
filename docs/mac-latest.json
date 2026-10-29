@@ -1,9 +1,9 @@
 {
-  "version": "1.21",
-  "build": "22",
-  "url": "https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.21/TBIPTV-1.21.dmg",
-  "size": 40563887,
+  "version": "1.22",
+  "build": "23",
+  "url": "https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.22/TBIPTV-1.22.dmg",
+  "size": 40616394,
   "minimumSystemVersion": "14.0",
-  "notes": "Home can show trending films and series that are already in your playlistWhile you watch, you can search channels, open recent channels, lock the controls, and see stream infoLive picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts",
-  "published": "Thu, 29 Oct 2026 15:59:35 +0000"
+  "notes": "When an episode finishes, the next one can start on its ownSettings can pick a preferred soundtrack and subtitle languagePlaylist names can hide extra tags such as 4K and FHDHome can show trending films and series that are already in your playlistWhile you watch, you can search channels, open recent channels, lock the controls, and see stream infoLive picture can fit, fill or stretch, and you can turn deinterlace on for old broadcasts",
+  "published": "Thu, 29 Oct 2026 16:28:28 +0000"
 }
