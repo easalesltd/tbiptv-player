@@ -98,6 +98,7 @@
       --muted: #949494;
       --accent: #5A8EFF;
       --line: #2A3140;
+      --shadow: 0 18px 46px rgba(0, 0, 0, 0.42);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -111,18 +112,28 @@
     }
     a { color: var(--accent); }
     img { max-width: 100%; height: auto; display: block; }
-    .wrap { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
-    header {
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 13, 18, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(42, 49, 64, 0.85);
+    }
+    .bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 22px 0;
+      min-height: 72px;
+      padding: 10px 0;
     }
     .brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
-    .brand strong { font-size: 28px; }
+    .brand strong { font-size: 22px; letter-spacing: -0.02em; }
     .mark {
-      width: 48px; height: 48px; border-radius: 12px;
+      width: 40px; height: 40px; border-radius: 12px;
       background: var(--elevated); display: grid; place-items: center;
     }
     .btn {
@@ -134,57 +145,68 @@
       color: white;
       text-decoration: none;
       font-weight: 700;
-      font-size: 20px;
-      padding: 14px 22px;
+      font-size: 18px;
+      padding: 12px 18px;
       border-radius: 10px;
-      border: 0;
+      border: 2px solid transparent;
       cursor: pointer;
       font-family: inherit;
+      line-height: 1.2;
     }
-    .btn svg { width: 22px; height: 22px; flex-shrink: 0; fill: currentColor; }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; fill: currentColor; }
     .marks { display: inline-flex; align-items: center; gap: 6px; }
+    .marks svg { width: 20px; height: 20px; }
     .btn:hover { filter: brightness(1.08); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .btn.outline {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn.outline:hover { background: rgba(90, 142, 255, 0.12); filter: none; }
+    .btn.compact { font-size: 16px; padding: 8px 14px; border-radius: 999px; }
     h1 {
       font-size: clamp(36px, 6vw, 56px);
       line-height: 1.08;
-      margin: 8px 0 16px;
+      margin: 0 0 16px;
       letter-spacing: -0.03em;
     }
-    h2 { font-size: 32px; margin: 0 0 12px; }
+    h2 { font-size: 32px; margin: 0 0 18px; letter-spacing: -0.02em; }
     h3 { margin: 0 0 6px; font-size: 22px; }
-    .lede { font-size: 23px; max-width: 40rem; margin: 0 0 24px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero { padding: 18px 0 8px; }
-    figure { margin: 0; }
-    .shot {
-      margin: 28px 0 0;
-      background: var(--surface);
+    .lede { font-size: 22px; max-width: 40rem; margin: 0 0 16px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      margin: 4px 0 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      overflow: hidden;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 700;
     }
-    .card, .tile, form, .step {
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero { padding: 28px 0 12px; }
+    .hero-shot { margin: 8px 0 18px; }
+    figure { margin: 0; }
+    .frame img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+    .card, form, .step, .else-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 16px;
     }
     .card { padding: 18px 20px; }
-    .card p { margin: 0; color: var(--muted); }
+    .card p, .feature-copy p, .else-card p { margin: 0; color: var(--muted); }
     .step p { margin: 0; }
-    .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .tile { overflow: hidden; }
-    .stack { display: grid; gap: 22px; }
-    .feature { display: grid; gap: 14px; }
-    .feature .shot { margin: 0; }
     .why { margin: 22px 0 0; max-width: 40rem; }
-    .steps { display: grid; gap: 14px; }
-    .step { padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
-    .num {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: var(--accent); color: white;
-      display: grid; place-items: center; font-weight: 800;
-    }
-    section { padding: 22px 0 8px; }
+    section { padding: 36px 0 8px; }
+    #download, #feedback, #top { scroll-margin-top: 88px; }
     form { padding: 18px 20px 20px; display: grid; gap: 14px; }
     label { font-weight: 700; display: grid; gap: 8px; }
     input, select, textarea {
@@ -199,6 +221,36 @@
     textarea { min-height: 140px; resize: vertical; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .fine { color: var(--muted); font-size: 17px; margin: 0; }
+    .steps { display: grid; gap: 14px; }
+    .step { padding: 22px 20px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .num {
+      font-size: 52px;
+      line-height: 0.9;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.04em;
+    }
+    .login-shot { width: min(900px, 100%); margin: 28px auto 0; }
+    .features { display: grid; gap: 42px; }
+    .feature { display: grid; gap: 18px; align-items: center; }
+    .feature-copy p { font-size: 18px; }
+    .shots { display: grid; gap: 14px; }
+    .else-head { margin: 28px 0 14px; }
+    .else-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .else-card { padding: 18px 18px 16px; }
+    .else-card svg {
+      width: 28px; height: 28px; margin-bottom: 12px;
+      fill: none; stroke: var(--accent); stroke-width: 1.8;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .else-card h3 { font-size: 18px; }
+    .else-card p { font-size: 16px; margin-top: 6px; }
+    .stack { display: grid; gap: 14px; }
     footer {
       margin-top: 42px;
       padding: 28px 0 40px;
@@ -207,42 +259,65 @@
       font-size: 18px;
     }
     footer p { margin: 0 0 8px; }
-    @media (max-width: 800px) {
-      .shots, .form-row { grid-template-columns: 1fr; }
+    @media (min-width: 900px) {
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        column-gap: 40px;
+        align-items: start;
+        padding-top: 48px;
+      }
+      .hero h1 { grid-column: 1; grid-row: 1; margin-bottom: 12px; }
+      .hero-copy { grid-column: 1; grid-row: 2; }
+      .hero-shot { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+      .steps { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+      .feature { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .feature.flip .feature-media { order: 2; }
+    }
+    @media (max-width: 899px) {
+      .hero .actions { flex-direction: column; align-items: stretch; }
+      .hero .actions .btn { width: 100%; min-height: 48px; }
+      .form-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <header class="site-header">
+    <div class="wrap bar">
       <a class="brand" href="#top">
         <span class="mark" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3.5l13 7.5-13 7.5z" fill="#5A8EFF"/></svg>
+          <svg width="18" height="18" viewBox="0 0 22 22"><path d="M6 3.5l13 7.5-13 7.5z" fill="#5A8EFF"/></svg>
         </span>
         <strong>TBIPTV</strong>
       </a>
-    </header>
+      <a class="btn compact" href="#download">Get it</a>
+    </div>
+  </header>
 
+  <div class="wrap">
     <main id="top">
       <section class="hero">
         <h1>A player for the playlist you already have</h1>
-        <p class="lede">TBIPTV plays your own Xstream or M3U login on Xbox, Windows or Mac. It comes with no channels, and you pay £2.99 once, with no subscription.</p>
-        <div class="actions">
-          <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">
-            <span class="marks">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8.2v8.2H3V3zm9.8 0H21v8.2h-8.2V3zM3 12.8h8.2V21H3v-8.2zm9.8 0H21V21h-8.2v-8.2z"/></svg>
-            </span>
-            Xbox &amp; Windows
-          </a>
-          <a class="btn" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
-            Mac: buy and download
-          </a>
-        </div>
-        <figure class="shot">
-          <img src="images/home.jpg" width="1400" height="788" alt="TBIPTV home screen on Xbox">
+        <figure class="frame hero-shot">
+          <img src="images/home.jpg" width="1400" height="788" alt="TBIPTV home screen on Xbox" loading="lazy">
         </figure>
+        <div class="hero-copy">
+          <p class="lede">TBIPTV plays your own Xstream or M3U login on Xbox, Windows or Mac. It comes with no channels, and you pay £2.99 once, with no subscription.</p>
+          <p class="pill">£2.99 once · No subscription</p>
+          <div class="actions" id="download">
+            <a class="btn" href="https://apps.microsoft.com/detail/9P69R4HTXG44">
+              <span class="marks">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8.2v8.2H3V3zm9.8 0H21v8.2h-8.2V3zM3 12.8h8.2V21H3v-8.2zm9.8 0H21V21h-8.2v-8.2z"/></svg>
+              </span>
+              Xbox &amp; Windows
+            </a>
+            <a class="btn outline" href="https://buy.stripe.com/cNibJ12UWbG99wvgcheIw00">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              Mac: buy and download
+            </a>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -262,50 +337,80 @@
           </article>
         </div>
         <p class="why">A friend told me there were no good IPTV apps for Xbox or Mac, so I made them.</p>
-        <figure class="shot">
-          <img src="images/xstream-login.jpg" width="1400" height="788" alt="Adding an Xstream Codes or M3U playlist in TBIPTV">
+        <figure class="frame login-shot">
+          <img src="images/xstream-login.jpg" width="1400" height="788" alt="Adding an Xstream Codes or M3U playlist in TBIPTV" loading="lazy">
         </figure>
       </section>
 
       <section>
         <h2>What it does</h2>
-        <div class="stack">
-          <div class="feature">
-            <article class="card">
+        <div class="features">
+          <article class="feature">
+            <figure class="frame feature-media">
+              <img src="images/live-tv.jpg" width="1400" height="788" alt="Live TV in TBIPTV" loading="lazy">
+            </figure>
+            <div class="feature-copy">
               <h3>Live TV</h3>
               <p>Categories and a guide, catch-up where your playlist supports it, and reminders before a programme starts. You can hide anything that isn’t FHD.</p>
-            </article>
-            <figure class="shot">
-              <img src="images/live-tv.jpg" width="1400" height="788" alt="Live TV in TBIPTV">
-            </figure>
-          </div>
-          <div class="feature">
-            <article class="card">
-              <h3>Films and series</h3>
-              <p>Posters, cast and plot, resume where you stopped, and the next episode offered. Home can list films and series that are popular right now, but only if they are already in your playlist. Trailers play in-app if the playlist has one.</p>
-            </article>
-            <div class="shots">
-              <figure class="tile">
-                <img src="images/movies.jpg" width="1400" height="788" alt="Films in TBIPTV">
+            </div>
+          </article>
+          <article class="feature flip">
+            <div class="shots feature-media">
+              <figure class="frame">
+                <img src="images/movies.jpg" width="1400" height="788" alt="Films in TBIPTV" loading="lazy">
               </figure>
-              <figure class="tile">
-                <img src="images/film-details.jpg" width="1400" height="788" alt="A film’s details in TBIPTV">
+              <figure class="frame">
+                <img src="images/film-details.jpg" width="1400" height="788" alt="A film’s details in TBIPTV" loading="lazy">
               </figure>
             </div>
-          </div>
-          <article class="card">
-            <h3>Sport</h3>
-            <p>Channels grouped by sport, country and league, taken from the channel name and guide. A match starting within two hours counts as on now.</p>
+            <div class="feature-copy">
+              <h3>Films and series</h3>
+              <p>Posters, cast and plot, resume where you stopped, and the next episode offered. Home can list films and series that are popular right now, but only if they are already in your playlist. Trailers play in-app if the playlist has one.</p>
+            </div>
           </article>
-          <div class="feature">
-            <article class="card">
-              <h3>Everything else</h3>
-              <p>A mini player while you browse (with speed, soundtrack, subtitles and picture fit on films and catch-up). While a stream plays you can search channels, jump back through recent channels, lock the controls, and see stream info. PIN-locked or hidden categories, favourite folders, and typo-tolerant search that finds actors too.</p>
-            </article>
-            <figure class="shot">
-              <img src="images/mini-player.jpg" width="1400" height="788" alt="TBIPTV mini player">
-            </figure>
-          </div>
+          <!-- TODO: Sport has no screenshot yet. Add one beside this row when it exists. -->
+          <article class="feature feature-text">
+            <div class="feature-copy">
+              <h3>Sport</h3>
+              <p>Channels grouped by sport, country and league, taken from the channel name and guide. A match starting within two hours counts as on now.</p>
+            </div>
+          </article>
+        </div>
+        <h3 class="else-head">Everything else</h3>
+        <figure class="frame">
+          <img src="images/mini-player.jpg" width="1400" height="788" alt="TBIPTV mini player" loading="lazy">
+        </figure>
+        <div class="else-grid">
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><rect x="12" y="11" width="7" height="5" rx="1"/></svg>
+            <h3>Mini player</h3>
+            <p>A mini player while you browse (with speed, soundtrack, subtitles and picture fit on films and catch-up).</p>
+          </article>
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M16 16l4.5 4.5"/></svg>
+            <h3>Search</h3>
+            <p>While a stream plays you can search channels, jump back through recent channels. Typo-tolerant search that finds actors too.</p>
+          </article>
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <h3>Lock controls</h3>
+            <p>Lock the controls.</p>
+          </article>
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="2" fill="#0B0D12"/><circle cx="15" cy="12" r="2" fill="#0B0D12"/><circle cx="11" cy="17" r="2" fill="#0B0D12"/></svg>
+            <h3>Stream info</h3>
+            <p>See stream info.</p>
+          </article>
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="9" cy="8" r="0.8" fill="#5A8EFF" stroke="none"/><circle cx="12" cy="8" r="0.8" fill="#5A8EFF" stroke="none"/><circle cx="15" cy="8" r="0.8" fill="#5A8EFF" stroke="none"/><circle cx="9" cy="12" r="0.8" fill="#5A8EFF" stroke="none"/><circle cx="12" cy="12" r="0.8" fill="#5A8EFF" stroke="none"/><circle cx="15" cy="12" r="0.8" fill="#5A8EFF" stroke="none"/><path d="M9 16.5h6"/></svg>
+            <h3>PIN-locked categories</h3>
+            <p>PIN-locked or hidden categories.</p>
+          </article>
+          <article class="else-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A1.5 1.5 0 0 1 4.5 6H9l2 2h8.5A1.5 1.5 0 0 1 21 9.5v8A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-10z"/></svg>
+            <h3>Favourite folders</h3>
+            <p>Favourite folders.</p>
+          </article>
         </div>
       </section>
 
