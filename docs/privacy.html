@@ -32,13 +32,33 @@
     .lede, .hint { color: var(--muted); }
     .hint { font-size: 16px; }
   </style>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    if (localStorage.getItem('tbiptv-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KV5LT44D');</script>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV5LT44D" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
   <div class="wrap">
     <p><a href="./">TBIPTV</a></p>
     <h1>Privacy policy</h1>
-    <p class="hint">Last updated: 1 November 2026</p>
-    <p class="lede">TBIPTV is a media player developed by Langeydong. This page explains what the app does with your information on Xbox and Mac.</p>
+    <p class="hint">Last updated: 7 November 2026</p>
+    <p class="lede">TBIPTV is a media player developed by Langeydong. This page explains what the app does with your information on Xbox, Windows and Mac, and what this website does.</p>
 
     <h2>What the app is</h2>
     <p>TBIPTV does not include, sell, host or link to any channels, films, series or subscriptions. You add a playlist (an Xtream Codes login or an M3U address) from a service you are legally entitled to watch.</p>
@@ -58,6 +78,9 @@
       <li><strong>Apple media charts.</strong> To show trending films and series on Home, the app reads Apple’s public UK charts and keeps only titles that already appear in your playlist. No login details are sent.</li>
     </ul>
 
+    <h2>This website</h2>
+    <p>www.tbiptv.co.uk uses Google Tag Manager to count visits, and only if you allow it. Until you choose, counting stays off. Google’s own privacy policy applies to that count. Playlist passwords are not sent to Google.</p>
+
     <h2>What the app does not do</h2>
     <ul>
       <li>No user accounts, sign-up or tracking.</li>
@@ -75,5 +98,6 @@
     <h2>Contact</h2>
     <p>Questions: <a href="https://github.com/easalesltd/tbiptv-player/issues">github.com/easalesltd/tbiptv-player/issues</a></p>
   </div>
+  <script src="consent.js"></script>
 </body>
 </html>

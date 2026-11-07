@@ -289,8 +289,28 @@
       .form-row { grid-template-columns: 1fr; }
     }
   </style>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    if (localStorage.getItem('tbiptv-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KV5LT44D');</script>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV5LT44D" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="#top">
@@ -426,7 +446,7 @@
       <section>
         <h2>Privacy</h2>
         <article class="card">
-          <p>Your login goes only to the server you entered. No TBIPTV account, no ads, no tracking.</p>
+          <p>Your login goes only to the server you entered. The app has no TBIPTV account and no ads. This website counts visits with Google if you allow it.</p>
         </article>
       </section>
 
@@ -492,5 +512,6 @@
         + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
     });
   </script>
+  <script src="consent.js"></script>
 </body>
 </html>
