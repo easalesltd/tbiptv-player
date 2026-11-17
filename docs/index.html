@@ -216,7 +216,42 @@
     .step p { margin: 0; }
     .why { margin: 22px 0 0; max-width: 40rem; }
     section { padding: 36px 0 8px; }
-    #download, #feedback, #top { scroll-margin-top: 88px; }
+    #download, #feedback, #top, #updates { scroll-margin-top: 88px; }
+    .nav-links { display: flex; align-items: center; gap: 16px; }
+    .nav-links a:not(.btn) { color: var(--text); text-decoration: none; font-weight: 700; font-size: 16px; }
+    .nav-links a:not(.btn):hover { color: var(--accent); }
+    .updates-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .updates-head h2 { margin: 0; }
+    .tracker {
+      height: 340px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      position: relative;
+    }
+    .tracker.is-paused,
+    .tracker.is-still { overflow-y: auto; }
+    .tracker-track { display: flex; flex-direction: column; }
+    .tracker-list { list-style: none; margin: 0; padding: 8px 0; }
+    .tracker-list li {
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--line);
+      color: var(--text);
+      font-size: 18px;
+    }
+    .tracker.is-playing .tracker-track {
+      animation: tracker-scroll linear infinite;
+    }
+    .tracker.is-playing:hover .tracker-track,
+    .tracker.is-playing:focus-within .tracker-track { animation-play-state: paused; }
+    @keyframes tracker-scroll {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tracker.is-playing .tracker-track { animation: none; }
+    }
     form { padding: 18px 20px 20px; display: grid; gap: 14px; }
     label { font-weight: 700; display: grid; gap: 8px; }
     input, select, textarea {
@@ -320,7 +355,10 @@
         </span>
         <strong>TBIPTV Xstream</strong>
       </a>
-      <a class="btn compact" href="#download">Get it</a>
+      <nav class="nav-links">
+        <a href="#updates">Updates</a>
+        <a class="btn compact" href="#download">Get it</a>
+      </nav>
     </div>
   </header>
 
@@ -444,6 +482,70 @@
         </div>
       </section>
 
+      <section id="updates">
+        <div class="updates-head">
+          <h2>Updates</h2>
+          <button class="btn outline compact" type="button" id="updates-pause">Pause</button>
+        </div>
+        <p class="fine">Newest first. This is what changed for someone using the app.</p>
+        <div class="tracker is-still" id="update-tracker">
+          <ul class="tracker-list" id="update-list">
+            <li>A 4K film uses the console’s picture chip, so the picture keeps up.</li>
+            <li>A film that had sound and a blank picture on Xbox now shows the picture.</li>
+            <li>Search lists every film and show it found, instead of stopping at the first poster.</li>
+            <li>A film or episode still plays when the file name is only a label. The player reads what is inside.</li>
+            <li>A film or episode kept as MKV or AVI plays when the device can decode the picture. Surround sound plays in stereo.</li>
+            <li>The file itself chooses the player before it starts, and that file is the only one opened.</li>
+            <li>From Search, Down on the controller reaches Settings.</li>
+            <li>On Windows, channels and films sit beside the categories, and the mouse pointer stays visible.</li>
+            <li>A film that never starts says so. A film that is playing shows no extra message.</li>
+            <li>The name in the top left stays TBIPTV.</li>
+            <li>The app is called TBIPTV Xstream.</li>
+            <li>A note about trying another stream only appears when a channel is stuck.</li>
+            <li>A 10 second jump no longer leaves a loading circle on the picture.</li>
+            <li>A quick press left or right jumps 10 seconds. Hold to move further, then let go and it plays from there.</li>
+            <li>Series categories appear as soon as they arrive.</li>
+            <li>Continue watching is given room, so the posters are drawn.</li>
+            <li>Channel, film and series lists are given longer to download, and each page fills in as its list arrives.</li>
+            <li>Opening a film or a series no longer closes the app.</li>
+            <li>Categories and lists share the width of the screen, including on a narrower console.</li>
+            <li>A title with a bad picture or an empty name no longer closes the app.</li>
+            <li>Change playlist is in Settings, and the side menu stays available.</li>
+            <li>Opening a film or a series puts the highlight on Play.</li>
+            <li>A film or episode can start as soon as the picture arrives, and it is left alone while it is buffering.</li>
+            <li>Favourites on Home stay where they are, instead of appearing at the top and then jumping down.</li>
+            <li>In full screen, X stops the film. A plays and pauses. B goes back.</li>
+            <li>While you hold left or right, the clock moves. The film jumps once when you let go.</li>
+            <li>A 4K channel can start smaller and then sharpen, instead of being forced onto the largest picture straight away.</li>
+            <li>The on-screen controls stay up while you are still holding the stick.</li>
+            <li>The time bar keeps the full length of the film.</li>
+            <li>A failed refresh of a saved playlist leaves you in the app.</li>
+            <li>Start closes the on-screen keyboard.</li>
+            <li>Favourites is a list of names, with a small logo beside each name.</li>
+            <li>The first time the Windows app opens, the login fits on screen.</li>
+            <li>The mini player stays in the corner. On a computer, double-click does the same.</li>
+            <li>Live channel names keep FHD, HD, 4K or SD on the end, so two copies of the same channel stay distinct.</li>
+            <li>FHD only hides channels whose names do not include FHD.</li>
+            <li>When an episode finishes, the next one can start. If a film pauses to buffer, it carries on from the same place.</li>
+            <li>You can choose a preferred soundtrack and subtitle language. Playlist names can hide extra tags such as 4K.</li>
+            <li>Add to Favourites is on Live TV, the guide, and the bar while a channel is playing.</li>
+            <li>Sport can be filtered by sport, country and league.</li>
+            <li>While a channel is playing, the guide lists that channel. Catch-up and a reminder work when the channel allows them.</li>
+            <li>A category can be hidden, or locked behind a PIN.</li>
+            <li>Search still works if one letter is wrong, and it looks at actor names.</li>
+            <li>Favourites can be put in folders. Channel, film and series lists are saved on the device, so the next open is faster.</li>
+            <li>A trailer plays in the app. A YouTube trailer opens in YouTube.</li>
+            <li>Home opens from the saved playlist straight away. The app stays open instead of closing on the logo.</li>
+            <li>A full login link can be pasted into the server box. A playlist that fails to connect is not kept, and delete asks first.</li>
+            <li>Text is larger on a television, and the password can be shown on the login screen.</li>
+            <li>On Mac, Home opens without freezing on a large playlist, and the app tells you when a new version is ready.</li>
+            <li>On Mac, football on Home stays football. A tennis or darts match does not land there.</li>
+            <li>On Mac, you can save a film or episode and watch it without a connection. Live TV stays a stream.</li>
+            <li>On Mac, if the playlist server is down, you can change the address or pick another playlist.</li>
+          </ul>
+        </div>
+      </section>
+
       <section>
         <h2>Privacy</h2>
         <article class="card">
@@ -501,6 +603,35 @@
     </footer>
   </div>
   <script>
+    (function () {
+      var tracker = document.getElementById("update-tracker");
+      var list = document.getElementById("update-list");
+      var pause = document.getElementById("updates-pause");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce && list) {
+        var clone = list.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        var track = document.createElement("div");
+        track.className = "tracker-track";
+        tracker.insertBefore(track, list);
+        track.appendChild(list);
+        track.appendChild(clone);
+        var distance = list.scrollHeight;
+        track.style.animationDuration = Math.max(48, Math.round(distance / 28)) + "s";
+        tracker.classList.remove("is-still");
+        tracker.classList.add("is-playing");
+      }
+      if (pause && tracker) {
+        if (reduce) pause.hidden = true;
+        pause.addEventListener("click", function () {
+          if (reduce) return;
+          var playing = tracker.classList.contains("is-playing");
+          tracker.classList.toggle("is-playing", !playing);
+          tracker.classList.toggle("is-paused", playing);
+          pause.textContent = playing ? "Play" : "Pause";
+        });
+      }
+    })();
     document.getElementById("feedback-form").addEventListener("submit", function (event) {
       event.preventDefault();
       var kind = document.getElementById("kind").value;
