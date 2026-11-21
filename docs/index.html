@@ -311,21 +311,29 @@
     .else-card p { font-size: 16px; margin-top: 6px; }
     .stack { display: grid; gap: 14px; }
     .phone-hero { display: flex; justify-content: center; }
-    .phone-bezel, .tablet-bezel, .wide-bezel {
+    .phone-bezel, .tablet-bezel, .wide-bezel, .duo-inner {
       background: #090b10;
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
     .phone-bezel {
       width: min(280px, 72vw);
       border: 10px solid #1c212b;
       border-radius: 36px;
-      padding: 10px 8px 16px;
+      padding: 8px;
     }
     .phone-bezel img, .tablet-bezel img, .wide-bezel img, .duo-inner img {
       width: 100%;
       height: auto;
       display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .phone-bezel img {
       border-radius: 22px;
+    }
+    .duo-fold .phone-bezel img {
+      aspect-ratio: 1398 / 2034;
     }
     .tablet-bezel {
       width: min(720px, 100%);
@@ -404,16 +412,19 @@
     .rail .wide-bezel { width: min(760px, 88vw); }
     .duo-fold {
       display: grid;
-      grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
-      gap: 24px;
+      grid-template-columns: minmax(168px, 220px) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .duo-fold .rail {
       align-items: start;
     }
     .duo-fold .rail .phone-bezel {
-      width: min(220px, 100%);
+      width: min(200px, 100%);
       flex: 0 0 auto;
     }
-    .duo-fold .rail .wide-bezel {
-      width: min(680px, 86vw);
+    .duo-fold .rail .duo-inner {
+      width: min(640px, 100%);
       flex: 0 0 auto;
     }
     .duo-pane h3 {
@@ -425,13 +436,14 @@
       text-transform: uppercase;
     }
     .duo-inner {
-      background: #090b10;
-      border: 10px solid #1c212b;
-      border-radius: 18px;
-      padding: 8px;
-      box-shadow: var(--shadow);
+      border: 12px solid #1c212b;
+      border-radius: 24px;
+      padding: 10px;
     }
-    .duo-inner img { border-radius: 8px; }
+    .duo-inner img {
+      aspect-ratio: 2853 / 2007;
+      border-radius: 12px;
+    }
     .soon-panel {
       background: var(--surface);
       border: 1px dashed var(--line);
@@ -563,7 +575,7 @@
       .showroom { min-height: 0; }
       .rail { gap: 12px; padding: 4px 0 16px; }
       .rail .phone-bezel { width: min(248px, 74vw); }
-      .rail .tablet-bezel, .rail .wide-bezel, .duo-fold .rail .wide-bezel { width: min(100%, 88vw); }
+      .rail .tablet-bezel, .rail .wide-bezel, .duo-fold .rail .duo-inner { width: min(100%, 88vw); }
       .duo-fold { gap: 20px; }
       .duo-pane h3 { margin-bottom: 8px; }
       .features { gap: 28px; }
@@ -965,7 +977,10 @@
 
       function bezel(frame, img) {
         var wrap = document.createElement("figure");
-        wrap.className = frame === "phone" ? "phone-bezel" : frame === "tablet" ? "tablet-bezel" : "wide-bezel";
+        wrap.className = frame === "phone" ? "phone-bezel"
+          : frame === "tablet" ? "tablet-bezel"
+          : frame === "duo-inner" ? "duo-inner"
+          : "wide-bezel";
         wrap.appendChild(img);
         return wrap;
       }
@@ -1012,9 +1027,7 @@
           var inner = document.createElement("div");
           inner.className = "duo-pane";
           inner.innerHTML = "<h3>Inner display</h3>";
-          inner.appendChild(rail(data.inner.map(function (item) {
-            return item;
-          }), "wide"));
+          inner.appendChild(rail(data.inner, "duo-inner"));
           fold.appendChild(cover);
           fold.appendChild(inner);
           showroom.appendChild(fold);
