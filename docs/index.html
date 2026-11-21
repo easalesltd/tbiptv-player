@@ -228,6 +228,12 @@
       border-color: var(--accent);
     }
     .btn.outline:hover { background: rgba(90, 142, 255, 0.12); filter: none; }
+    .btn.soon {
+      cursor: default;
+      opacity: 0.78;
+      pointer-events: none;
+    }
+    .btn.outline.soon:hover { background: transparent; filter: none; }
     .btn.compact { font-size: 16px; padding: 8px 14px; border-radius: 999px; }
     h1 {
       font-size: clamp(36px, 6vw, 56px);
@@ -736,8 +742,15 @@
                 <small>Mac · Apple silicon &amp; Intel</small>
               </span>
             </a>
+            <span class="btn outline soon" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85l1.84 3.18C4.16 11.17 2.9 13.84 2.9 16.8v.4c0 1.21.98 2.2 2.2 2.2h.4v1.7c0 .66.54 1.2 1.2 1.2s1.2-.54 1.2-1.2v-1.7h6.2v1.7c0 .66.54 1.2 1.2 1.2s1.2-.54 1.2-1.2v-1.7h.4c1.21 0 2.2-.99 2.2-2.2v-.4c0-2.96-1.26-5.63-3.5-7.32zM7.9 15.05a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1zm8.2 0a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z"/></svg>
+              <span class="btn-copy">
+                <strong>Android</strong>
+                <small>Coming soon</small>
+              </span>
+            </span>
           </div>
-          <p class="tv-note">Android phone, tablet and Google TV: first version is ready. Play Store listing is next. Apple TV is coming soon.</p>
+          <p class="tv-note">Android phone, tablet and Google TV are coming soon. Apple TV is coming soon.</p>
         </div>
       </section>
 
@@ -770,8 +783,8 @@
           <button type="button" role="tab" aria-selected="true" data-device="iphone">iPhone</button>
           <button type="button" role="tab" aria-selected="false" data-device="duo">iPhone Duo</button>
           <button type="button" role="tab" aria-selected="false" data-device="ipad">iPad</button>
-          <button type="button" role="tab" aria-selected="false" data-device="android">Android</button>
-          <button type="button" role="tab" aria-selected="false" data-device="googletv">Google TV</button>
+          <button type="button" role="tab" aria-selected="false" data-device="android">Android <span class="soon">Soon</span></button>
+          <button type="button" role="tab" aria-selected="false" data-device="googletv">Google TV <span class="soon">Soon</span></button>
           <button type="button" role="tab" aria-selected="false" data-device="mac">Mac</button>
           <button type="button" role="tab" aria-selected="false" data-device="xbox">Xbox</button>
           <button type="button" role="tab" aria-selected="false" data-device="tv">Apple TV <span class="soon">Soon</span></button>
@@ -869,8 +882,8 @@
           <button type="button" role="tab" aria-selected="true" data-update="iphone">iPhone</button>
           <button type="button" role="tab" aria-selected="false" data-update="duo">iPhone Duo</button>
           <button type="button" role="tab" aria-selected="false" data-update="ipad">iPad</button>
-          <button type="button" role="tab" aria-selected="false" data-update="android">Android</button>
-          <button type="button" role="tab" aria-selected="false" data-update="googletv">Google TV</button>
+          <button type="button" role="tab" aria-selected="false" data-update="android">Android <span class="soon">Soon</span></button>
+          <button type="button" role="tab" aria-selected="false" data-update="googletv">Google TV <span class="soon">Soon</span></button>
           <button type="button" role="tab" aria-selected="false" data-update="mac">Mac</button>
           <button type="button" role="tab" aria-selected="false" data-update="xbox">Xbox</button>
           <button type="button" role="tab" aria-selected="false" data-update="windows">Windows</button>
@@ -916,7 +929,7 @@
           </div>
         </div>
         <div class="update-panel" data-update-panel="android">
-          <p class="update-now">First Android version is ready. Play Store listing is next.</p>
+          <p class="update-now">Coming soon. The first Android phone and tablet version is on the way.</p>
           <div class="tracker" tabindex="0">
             <ul class="tracker-list">
               <li><span class="ver">1.0</span><span>The bar at the bottom opens Home, Live TV, films, series and Settings. Settings has stream format, buffer, name clean-up, soundtrack and playlists.</span></li>
@@ -927,7 +940,7 @@
           </div>
         </div>
         <div class="update-panel" data-update-panel="googletv">
-          <p class="update-now">First Google TV version is ready. Play Store listing is next.</p>
+          <p class="update-now">Coming soon. The first Google TV version is on the way.</p>
           <div class="tracker" tabindex="0">
             <ul class="tracker-list">
               <li><span class="ver">1.0</span><span>First Google TV release: add your own Xtream Codes or M3U playlist, then watch live TV, films and series with the remote. No channels included.</span></li>
@@ -1170,8 +1183,8 @@
           inner: set("duo-inner", " on the iPhone Duo inner display")
         },
         ipad: { frame: "tablet", shots: set("ipad", " on iPad") },
-        android: { soon: true, message: "Android phone and tablet screenshots are next. The first version is ready: add your own playlist, then watch live TV, films and series, with Picture in Picture." },
-        googletv: { soon: true, message: "Google TV screenshots are next. The first version is ready: add your own playlist, then watch with the remote. A mini player sits in the corner while you browse." },
+        android: { soon: true, message: "Android phone and tablet are coming soon. Add your own playlist, then watch live TV, films and series, with Picture in Picture." },
+        googletv: { soon: true, message: "Google TV is coming soon. Add your own playlist, then watch with the remote. A mini player sits in the corner while you browse." },
         mac: { frame: "wide", shots: set("mac", " on Mac") },
         xbox: {
           frame: "wide",

@@ -23,7 +23,7 @@ It does not include, sell or link to channels, films, series or subscriptions.
 - iPhone, iPhone Duo and iPad: https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
 - Mac (Apple silicon and Intel): https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
 - Xbox and Windows: https://apps.microsoft.com/detail/9P69R4HTXG44
-- Android phone, tablet and Google TV: first version ready, Play Store listing next
+- Android phone, tablet and Google TV: coming soon
 - Apple TV: coming soon
 
 ## Site
