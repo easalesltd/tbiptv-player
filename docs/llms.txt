@@ -15,14 +15,15 @@ It does not include, sell or link to channels, films, series or subscriptions.
 
 ## Picture in Picture
 
-- iPhone, iPad and Mac: Picture in Picture
-- Xbox and Windows: mini player in the corner while you browse
+- iPhone, iPad, Mac, and Android phones and tablets: Picture in Picture
+- Google TV, Xbox and Windows: mini player in the corner while you browse
 
 ## Platforms
 
 - iPhone, iPhone Duo and iPad: https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
 - Mac (Apple silicon and Intel): https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
 - Xbox and Windows: https://apps.microsoft.com/detail/9P69R4HTXG44
+- Android phone, tablet and Google TV: first version ready, Play Store listing next
 - Apple TV: coming soon
 
 ## Site
