@@ -5,11 +5,12 @@
   var bar = document.createElement("div");
   bar.setAttribute("role", "dialog");
   bar.setAttribute("aria-label", "Visit counting");
+  bar.className = "consent-bar";
   bar.style.cssText = [
     "position:fixed",
     "left:16px",
     "right:16px",
-    "bottom:16px",
+    "bottom:max(16px, env(safe-area-inset-bottom))",
     "z-index:40",
     "display:flex",
     "flex-wrap:wrap",
@@ -24,7 +25,7 @@
     "border:1px solid #2A3140",
     "border-radius:16px",
     "box-shadow:0 18px 46px rgba(0,0,0,.42)",
-    "font:20px/1.4 Segoe UI,system-ui,-apple-system,sans-serif"
+    "font:17px/1.4 Segoe UI,system-ui,-apple-system,sans-serif"
   ].join(";");
 
   var text = document.createElement("p");
@@ -32,7 +33,8 @@
   text.textContent = "This site uses Google to count visits. The app itself does not.";
 
   var actions = document.createElement("div");
-  actions.style.cssText = "display:flex;gap:10px";
+  actions.className = "consent-actions";
+  actions.style.cssText = "display:flex;flex-wrap:wrap;gap:10px";
 
   function button(label, filled) {
     var el = document.createElement("button");

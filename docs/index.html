@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>The Best IPTV (TBIPTV Xstream) for iPhone, iPad, Xbox, Windows and Mac</title>
   <meta name="description" content="TBIPTV Xstream means The Best IPTV: an Xstream or M3U player for iPhone, iPhone Duo, iPad, Xbox, Windows and Mac. Live TV, films, series and sport. £2.99 once. No channels included.">
   <link rel="canonical" href="https://www.tbiptv.co.uk/">
@@ -482,10 +482,112 @@
       .feature.flip .feature-media { order: 2; }
     }
     @media (max-width: 899px) {
+      .hero { display: flex; flex-direction: column; gap: 18px; }
+      .hero h1 { order: 0; }
+      .hero-copy { order: 1; }
+      .hero-shot { order: 2; margin: 4px auto 0; }
       .hero .actions { flex-direction: column; align-items: stretch; }
       .hero .actions .btn { width: 100%; min-height: 48px; }
       .form-row { grid-template-columns: 1fr; }
       .duo-fold { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .wrap { width: min(1120px, calc(100% - 28px)); }
+      .bar {
+        min-height: 56px;
+        padding: 8px 0;
+        gap: 10px;
+      }
+      .brand { gap: 8px; min-width: 0; }
+      .brand strong { font-size: 16px; white-space: nowrap; }
+      .mark { width: 32px; height: 32px; border-radius: 9px; }
+      .nav-links { gap: 0; flex-shrink: 0; }
+      .nav-page { display: none; }
+      .btn.compact {
+        white-space: nowrap;
+        font-size: 15px;
+        padding: 8px 14px;
+      }
+      body { padding-bottom: env(safe-area-inset-bottom); }
+      h1 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 12px; }
+      h2 { font-size: 24px; margin-bottom: 12px; }
+      h3 { font-size: 19px; }
+      .lede { font-size: 17px; margin-bottom: 12px; max-width: none; }
+      .pill {
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+        width: auto;
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.35;
+        padding: 8px 12px;
+        margin: 0 0 14px;
+      }
+      .actions { gap: 10px; }
+      .btn { font-size: 16px; padding: 12px 14px; }
+      .hero { padding: 18px 0 8px; }
+      .phone-hero .phone-bezel { width: min(210px, 58vw); padding: 8px 6px 12px; border-width: 8px; border-radius: 28px; }
+      .phone-hero .phone-bezel img { border-radius: 18px; }
+      .tv-note { font-size: 15px; margin-top: 10px; }
+      section { padding: 36px 0 8px; }
+      #download, #feedback, #top, #updates, #look { scroll-margin-top: 72px; }
+      .steps { gap: 10px; }
+      .step { padding: 16px 16px 14px; gap: 8px; }
+      .num { font-size: 32px; }
+      .why { margin-top: 16px; }
+      .login-shot { margin-top: 20px; }
+      .feature-copy p { font-size: 16px; }
+      .device-tabs {
+        position: static;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        margin: 14px 0 16px;
+        padding: 4px 20px 14px 0;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        scrollbar-width: none;
+      }
+      .device-tabs::-webkit-scrollbar { display: none; }
+      .device-tabs button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+      .showroom { min-height: 0; }
+      .rail { gap: 12px; padding: 4px 0 16px; }
+      .rail .phone-bezel { width: min(248px, 74vw); }
+      .rail .tablet-bezel, .rail .wide-bezel, .duo-fold .rail .wide-bezel { width: min(100%, 88vw); }
+      .duo-fold { gap: 20px; }
+      .duo-pane h3 { margin-bottom: 8px; }
+      .features { gap: 28px; }
+      .else-head { margin: 22px 0 12px; }
+      .else-grid { grid-template-columns: 1fr; gap: 12px; }
+      .fine { font-size: 15px; }
+      .tracker { height: min(60vh, 420px); }
+      footer { font-size: 15px; margin-top: 28px; padding: 22px 0 96px; }
+      .shot-dialog { max-width: calc(100vw - 20px); }
+      .consent-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        left: 12px !important;
+        right: 12px !important;
+        font-size: 15px !important;
+        padding: 12px 14px !important;
+        gap: 10px !important;
+      }
+      .consent-bar p { flex: 1 1 auto !important; }
+      .consent-actions { width: 100%; }
+      .consent-bar button { flex: 1; font-size: 15px !important; padding: 10px 12px !important; }
+    }
+    @media (max-width: 360px) {
+      .brand strong { font-size: 15px; }
+      .btn.compact { font-size: 14px; padding: 8px 12px; }
     }
   </style>
   <script>
@@ -519,8 +621,8 @@
         <strong>TBIPTV Xstream</strong>
       </a>
       <nav class="nav-links">
-        <a href="#look">Screens</a>
-        <a href="#updates">Updates</a>
+        <a class="nav-page" href="#look">Screens</a>
+        <a class="nav-page" href="#updates">Updates</a>
         <a class="btn compact" href="#download">Get it</a>
       </nav>
     </div>
@@ -537,7 +639,7 @@
         </figure>
         <div class="hero-copy">
           <p class="lede">TBIPTV Xstream plays your own Xstream or M3U login on iPhone, iPhone Duo, iPad, Xbox, Windows or Mac. It comes with no channels, and you pay £2.99 once, with no subscription.</p>
-          <p class="pill">Now on iPhone, iPhone Duo and iPad · £2.99 once</p>
+          <p class="pill">Now on iPhone, Duo and iPad · £2.99 once</p>
           <div class="actions" id="download">
             <a class="btn" href="https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.4 1.5h7.2A2.9 2.9 0 0 1 18.5 4.4v15.2a2.9 2.9 0 0 1-2.9 2.9H8.4a2.9 2.9 0 0 1-2.9-2.9V4.4A2.9 2.9 0 0 1 8.4 1.5zm3.6 18.15a1.05 1.05 0 1 0 0 2.1 1.05 1.05 0 0 0 0-2.1zM9.2 3.4a.6.6 0 0 0 0 1.2h5.6a.6.6 0 0 0 0-1.2H9.2z"/></svg>
