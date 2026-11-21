@@ -235,6 +235,13 @@
     .nav-links a:not(.btn):hover { color: var(--accent); }
     .updates-head { margin-bottom: 14px; }
     .updates-head h2 { margin: 0; }
+    .update-now {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .update-panel { display: none; }
+    .update-panel.is-on { display: block; }
     .tracker {
       height: min(70vh, 520px);
       overflow-x: hidden;
@@ -790,10 +797,76 @@
         <div class="updates-head">
           <h2>Updates</h2>
         </div>
-        <p class="fine">Newest first. Xbox and Windows use 1.0 numbers. Mac uses its own.</p>
-        <div class="tracker" id="update-tracker" tabindex="0">
-          <ul class="tracker-list">
-            <li><span class="ver">1.0.58</span><span>A 4K film plays on Series S, Xbox One S and Xbox One X, the same way it does on Series X.</span></li>
+        <p class="fine">Pick an app. Newest first. Each list is only that app’s fixes.</p>
+        <div class="device-tabs" role="tablist" aria-label="Choose an app’s updates">
+          <button type="button" role="tab" aria-selected="true" data-update="iphone">iPhone</button>
+          <button type="button" role="tab" aria-selected="false" data-update="duo">iPhone Duo</button>
+          <button type="button" role="tab" aria-selected="false" data-update="ipad">iPad</button>
+          <button type="button" role="tab" aria-selected="false" data-update="mac">Mac</button>
+          <button type="button" role="tab" aria-selected="false" data-update="xbox">Xbox</button>
+          <button type="button" role="tab" aria-selected="false" data-update="windows">Windows</button>
+          <button type="button" role="tab" aria-selected="false" data-update="tv">Apple TV <span class="soon">Soon</span></button>
+        </div>
+        <div class="update-panel is-on" data-update-panel="iphone">
+          <p class="update-now">On the App Store. The next iPhone update is with Apple.</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.1</span><span>Home, films and series use a simpler layout. There is no corner preview: tap a channel, film or episode and it opens full screen.</span></li>
+              <li><span class="ver">1.1</span><span>Continue watching sits at the top of Home, with trending and recently added below. Posters keep their proper shape.</span></li>
+              <li><span class="ver">1.1</span><span>Film and series screens show categories, a single back control, and the play buttons without scrolling. Series open into episodes, including in landscape.</span></li>
+              <li><span class="ver">1.1</span><span>If a playlist is already saved, the app opens straight to Home instead of flashing the login screen.</span></li>
+              <li><span class="ver">1.1</span><span>Picture in Picture restores more quickly when you come back. Fit is the default picture mode.</span></li>
+              <li><span class="ver">1.0</span><span>First iPhone release: add your own Xtream or M3U playlist, then watch live TV, films and series. No channels included.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="duo">
+          <p class="update-now">On the App Store, as the iPhone app. The next Duo update is with Apple.</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.1</span><span>On the inner display, Live TV puts channels on the left and the picture on the right.</span></li>
+              <li><span class="ver">1.1</span><span>Fold it closed and the cover works like iPhone: tap a channel, film or episode for full screen, with no preview pane.</span></li>
+              <li><span class="ver">1.1</span><span>Home, films and series use the simpler iPhone layout. Saved login skips the login screen. Picture in Picture restores more quickly. Fit is the default picture mode.</span></li>
+              <li><span class="ver">1.0</span><span>First Duo release, as part of the iPhone app. Cover and inner screenshots are on the App Store.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="ipad">
+          <p class="update-now">On the App Store. The next iPad update is with Apple.</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.1</span><span>Live TV plays in the pane beside the channel list, in 16:9 so the picture is not stretched. Tap a channel to watch there.</span></li>
+              <li><span class="ver">1.1</span><span>Double tap that picture for full screen. Leave the app and it continues in Picture in Picture.</span></li>
+              <li><span class="ver">1.1</span><span>Channels that had sound but a black picture now show the picture.</span></li>
+              <li><span class="ver">1.1</span><span>Home, films and series use a simpler layout. Film and series screens show categories and the play buttons without scrolling.</span></li>
+              <li><span class="ver">1.1</span><span>If a playlist is already saved, the app opens straight to Home. Fit is the default picture mode. Picture in Picture restores more quickly.</span></li>
+              <li><span class="ver">1.0</span><span>First iPad release: add your own Xtream or M3U playlist, then watch live TV, films and series. No channels included.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="mac">
+          <p class="update-now">Latest download on this site: 1.28</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.28</span><span>The app is named TBIPTV Xstream in the menu, Dock and About screen.</span></li>
+              <li><span class="ver">1.27</span><span>Live channel names keep FHD, HD or SD on the end, so copies of the same channel stay distinct.</span></li>
+              <li><span class="ver">1.26</span><span>When an episode finishes, the next one in the series starts. Near the end, Up next names that episode.</span></li>
+              <li><span class="ver">1.25</span><span>If a film or episode pauses to buffer, it carries on from the same place instead of jumping back to the start.</span></li>
+              <li><span class="ver">1.24</span><span>Home opens without freezing on a large playlist, and the app tells you when a new version is ready.</span></li>
+              <li><span class="ver">1.22</span><span>You can choose a preferred soundtrack and subtitle language. Playlist names can hide extra tags such as 4K.</span></li>
+              <li><span class="ver">1.21</span><span>Home can show trending films and series that are already in your playlist. While you watch, you can search channels, lock the controls, and see stream info.</span></li>
+              <li><span class="ver">1.17</span><span>Starting a stream no longer puts Buffering over the picture.</span></li>
+              <li><span class="ver">1.15</span><span>Football on Home stays football. A tennis or darts match does not land there.</span></li>
+              <li><span class="ver">1.5</span><span>You can save a film or episode and watch it without a connection. Live TV stays a stream.</span></li>
+              <li><span class="ver">1.4</span><span>If the playlist server is down, you can change the address or pick another playlist.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="xbox">
+          <p class="update-now">Latest on Xbox: 1.0.58</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.0.58</span><span>A 4K film plays on Series S, Xbox One S and Xbox One X, the same way it does on Series X.</span></li>
             <li><span class="ver">1.0.57</span><span>A yellow note no longer appears while a film or channel is playing. A message only shows when a title never starts.</span></li>
             <li><span class="ver">1.0.56</span><span>A 4K film uses the console’s picture chip, so the picture keeps up.</span></li>
             <li><span class="ver">1.0.55</span><span>A film that had sound and a blank picture on Xbox now shows the picture.</span></li>
@@ -802,7 +875,6 @@
             <li><span class="ver">1.0.52</span><span>A film or episode kept as MKV or AVI plays when the device can decode the picture. Surround sound plays in stereo.</span></li>
             <li><span class="ver">1.0.52</span><span>The file itself chooses the player before it starts, and that file is the only one opened.</span></li>
             <li><span class="ver">1.0.51</span><span>From Search, Down on the controller reaches Settings.</span></li>
-            <li><span class="ver">1.0.50</span><span>On Windows, channels and films sit beside the categories, and the mouse pointer stays visible.</span></li>
             <li><span class="ver">1.0.49</span><span>A film that never starts says so. A film that is playing shows no extra message.</span></li>
             <li><span class="ver">1.0.48</span><span>The name in the top left stays TBIPTV.</span></li>
             <li><span class="ver">1.0.47</span><span>The app is called TBIPTV Xstream.</span></li>
@@ -827,8 +899,7 @@
             <li><span class="ver">1.0.29</span><span>The time bar keeps the full length of the film.</span></li>
             <li><span class="ver">1.0.29</span><span>Start closes the on-screen keyboard.</span></li>
             <li><span class="ver">1.0.28</span><span>Favourites is a list of names, with a small logo beside each name.</span></li>
-            <li><span class="ver">1.0.27</span><span>The first time the Windows app opens, the login fits on screen.</span></li>
-            <li><span class="ver">1.0.26</span><span>The mini player stays in the corner. On a computer, double-click does the same.</span></li>
+            <li><span class="ver">1.0.26</span><span>The mini player stays in the corner.</span></li>
             <li><span class="ver">1.0.25</span><span>Live channel names keep FHD, HD, 4K or SD on the end, so two copies of the same channel stay distinct.</span></li>
             <li><span class="ver">1.0.23</span><span>When an episode finishes, the next one can start. If a film pauses to buffer, it carries on from the same place.</span></li>
             <li><span class="ver">1.0.22</span><span>You can choose a preferred soundtrack and subtitle language. Playlist names can hide extra tags such as 4K.</span></li>
@@ -843,11 +914,45 @@
             <li><span class="ver">1.0.12</span><span>A full login link can be pasted into the server box. A playlist that fails to connect is not kept, and delete asks first.</span></li>
             <li><span class="ver">1.0.8</span><span>Home opens from the saved playlist straight away. The app stays open instead of closing on the logo.</span></li>
             <li><span class="ver">1.0.6</span><span>Text is larger on a television, and the password can be shown on the login screen.</span></li>
-            <li><span class="ver">Mac 1.24</span><span>Home opens without freezing on a large playlist, and the app tells you when a new version is ready.</span></li>
-            <li><span class="ver">Mac 1.15</span><span>Football on Home stays football. A tennis or darts match does not land there.</span></li>
-            <li><span class="ver">Mac 1.5</span><span>You can save a film or episode and watch it without a connection. Live TV stays a stream.</span></li>
-            <li><span class="ver">Mac 1.4</span><span>If the playlist server is down, you can change the address or pick another playlist.</span></li>
-          </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="windows">
+          <p class="update-now">Latest on Windows: 1.0.58</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.0.57</span><span>A yellow note no longer appears while a film or channel is playing. A message only shows when a title never starts.</span></li>
+              <li><span class="ver">1.0.54</span><span>Search lists every film and show it found, instead of stopping at the first poster.</span></li>
+              <li><span class="ver">1.0.53</span><span>A film or episode still plays when the file name is only a label. The player reads what is inside.</span></li>
+              <li><span class="ver">1.0.52</span><span>A film or episode kept as MKV or AVI plays when the device can decode the picture. Surround sound plays in stereo.</span></li>
+              <li><span class="ver">1.0.50</span><span>Channels and films sit beside the categories, and the mouse pointer stays visible.</span></li>
+              <li><span class="ver">1.0.49</span><span>A film that never starts says so. A film that is playing shows no extra message.</span></li>
+              <li><span class="ver">1.0.47</span><span>The app is called TBIPTV Xstream.</span></li>
+              <li><span class="ver">1.0.46</span><span>A 10 second jump no longer leaves a loading circle on the picture.</span></li>
+              <li><span class="ver">1.0.45</span><span>A quick press left or right jumps 10 seconds. Hold to move further, then let go and it plays from there.</span></li>
+              <li><span class="ver">1.0.44</span><span>Series categories appear as soon as they arrive.</span></li>
+              <li><span class="ver">1.0.41</span><span>Opening a film or a series no longer closes the app.</span></li>
+              <li><span class="ver">1.0.38</span><span>Change playlist is in Settings, and the side menu stays available.</span></li>
+              <li><span class="ver">1.0.37</span><span>A film or episode can start as soon as the picture arrives, and it is left alone while it is buffering.</span></li>
+              <li><span class="ver">1.0.27</span><span>The first time the app opens, the login fits on screen.</span></li>
+              <li><span class="ver">1.0.26</span><span>The mini player stays in the corner. Double-click does the same.</span></li>
+              <li><span class="ver">1.0.25</span><span>Live channel names keep FHD, HD, 4K or SD on the end, so two copies of the same channel stay distinct.</span></li>
+              <li><span class="ver">1.0.23</span><span>When an episode finishes, the next one can start. If a film pauses to buffer, it carries on from the same place.</span></li>
+              <li><span class="ver">1.0.22</span><span>You can choose a preferred soundtrack and subtitle language. Playlist names can hide extra tags such as 4K.</span></li>
+              <li><span class="ver">1.0.16</span><span>A category can be hidden, or locked behind a PIN. Favourites can be put in folders.</span></li>
+              <li><span class="ver">1.0.8</span><span>Home opens from the saved playlist straight away.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="update-panel" data-update-panel="tv">
+          <p class="update-now">Coming soon. The first Apple TV version is with Apple.</p>
+          <div class="tracker" tabindex="0">
+            <ul class="tracker-list">
+              <li><span class="ver">1.0</span><span>First Apple TV version: add your own Xtream or M3U playlist, then watch live TV, films and series. No channels included.</span></li>
+              <li><span class="ver">1.0</span><span>Live TV has categories, search and a TV guide. Films and series have posters, plots, cast and episode lists.</span></li>
+              <li><span class="ver">1.0</span><span>Favourites and continue watching sit in the tab bar. Picture in Picture is not on Apple TV.</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -1036,12 +1141,23 @@
         showroom.appendChild(rail(data.shots, data.frame));
       }
 
-      document.querySelectorAll(".device-tabs button").forEach(function (button) {
+      document.querySelectorAll("#look .device-tabs button").forEach(function (button) {
         button.addEventListener("click", function () {
-          document.querySelectorAll(".device-tabs button").forEach(function (other) {
+          document.querySelectorAll("#look .device-tabs button").forEach(function (other) {
             other.setAttribute("aria-selected", other === button ? "true" : "false");
           });
           render(button.getAttribute("data-device"));
+        });
+      });
+      document.querySelectorAll("#updates .device-tabs button").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var id = button.getAttribute("data-update");
+          document.querySelectorAll("#updates .device-tabs button").forEach(function (other) {
+            other.setAttribute("aria-selected", other === button ? "true" : "false");
+          });
+          document.querySelectorAll("#updates .update-panel").forEach(function (panel) {
+            panel.classList.toggle("is-on", panel.getAttribute("data-update-panel") === id);
+          });
         });
       });
       document.getElementById("shot-dialog-close").addEventListener("click", function () {
