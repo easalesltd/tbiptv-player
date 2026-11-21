@@ -408,10 +408,15 @@
     }
     .showroom {
       min-height: 420px;
+      min-width: 0;
     }
     .rail {
       display: flex;
+      flex-wrap: nowrap;
       gap: 18px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
       overflow-x: auto;
       overflow-y: hidden;
       scroll-snap-type: x proximity;
@@ -430,16 +435,20 @@
     .rail .wide-bezel { width: min(760px, 88vw); }
     .duo-fold {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 32px;
+      min-width: 0;
+    }
+    .duo-pane {
+      min-width: 0;
     }
     .duo-fold .rail {
       align-items: flex-start;
     }
     .duo-fold .rail .phone-bezel {
+      flex: 0 0 min(240px, 64vw);
       width: min(240px, 64vw);
       height: auto;
-      flex: 0 0 auto;
     }
     .duo-fold .rail .duo-inner {
       width: min(920px, 100%);
