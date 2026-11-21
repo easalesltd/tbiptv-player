@@ -1,0 +1,31 @@
+# TBIPTV Xstream
+
+TBIPTV Xstream (The Best IPTV) is a media player for IPTV playlists you already have.
+
+It does not include, sell or link to channels, films, series or subscriptions.
+
+## What it plays
+
+- Xtream Codes login (server, username, password)
+- M3U playlist address
+
+## Price
+
+£2.99 once. No monthly app subscription. No TBIPTV account.
+
+## Picture in Picture
+
+- iPhone, iPad and Mac: Picture in Picture
+- Xbox and Windows: mini player in the corner while you browse
+
+## Platforms
+
+- iPhone, iPhone Duo and iPad: https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
+- Mac (Apple silicon and Intel): https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
+- Xbox and Windows: https://apps.microsoft.com/detail/9P69R4HTXG44
+- Apple TV: coming soon
+
+## Site
+
+https://www.tbiptv.co.uk/
+https://www.tbiptv.co.uk/privacy.html
