@@ -18,6 +18,10 @@ It does not include, sell or link to channels, films, series or subscriptions.
 - iPhone, iPad, Mac, and Android phones and tablets: Picture in Picture
 - Google TV, Xbox and Windows: mini player in the corner while you browse
 
+## CarPlay
+
+On iPhone, when the car is parked you can browse live TV, films and series on CarPlay and watch there. Cars that cannot show video hide the app. It does not include channels.
+
 ## Platforms
 
 - iPhone, iPhone Duo and iPad: https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574
