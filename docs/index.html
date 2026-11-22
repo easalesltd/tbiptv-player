@@ -587,17 +587,39 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 18px;
-      margin: 0 0 10px;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
       padding: 0;
       list-style: none;
     }
     .social-links a {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--elevated);
+      border: 1px solid var(--line);
       color: var(--text);
       text-decoration: none;
-      font-size: 17px;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
     }
-    .social-links a:hover { color: var(--accent); text-decoration: underline; }
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: rgba(90, 142, 255, 0.55);
+      background: rgba(90, 142, 255, 0.12);
+      transform: translateY(-1px);
+    }
+    .social-links a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .social-links svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
     @media (min-width: 900px) {
       .hero {
         display: grid;
@@ -1194,9 +1216,21 @@
     <footer>
       <p>Developed by Langeydong. Published by EA Sales LTD.</p>
       <ul class="social-links" aria-label="Social media">
-        <li><a href="https://www.facebook.com/profile.php?id=61596903868149" rel="noopener noreferrer" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/tbiptvxstream/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
-        <li><a href="https://x.com/TBIPTVXSTREAM" rel="noopener noreferrer" target="_blank">X (Twitter)</a></li>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61596903868149" rel="noopener noreferrer" target="_blank" aria-label="TBIPTV Xstream on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5h2.5l-.3 2.8H14v9.2h-3.4v-9.2H9V8.5h1.6V6.7c0-1.6.4-2.8 1.2-3.6.8-.9 2-1.3 3.6-1.3.9 0 1.7.1 2.4.3v2.5h-1.6c-.8 0-1.3.2-1.6.5-.3.4-.5 1-.5 1.8v1.6z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/tbiptvxstream/" rel="noopener noreferrer" target="_blank" aria-label="TBIPTV Xstream on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 2A2.5 2.5 0 0 0 5 7.5v9A2.5 2.5 0 0 0 7.5 19h9a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 16.5 5h-9zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.6 7.1a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/TBIPTVXSTREAM" rel="noopener noreferrer" target="_blank" aria-label="TBIPTV Xstream on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </li>
       </ul>
       <p><a href="privacy.html">Privacy policy</a> · <a href="#feedback">Questions and support</a></p>
       <p>© 2026 Langeydong. TBIPTV Xstream does not provide any content.</p>
