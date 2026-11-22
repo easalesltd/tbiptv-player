@@ -338,6 +338,31 @@
       font-weight: 700;
     }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero .actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      width: 100%;
+    }
+    .hero .actions .btn {
+      width: 100%;
+      min-height: 76px;
+      padding: 12px 14px;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      text-align: left;
+    }
+    .hero .actions .btn .btn-copy {
+      flex: 1;
+      min-width: 0;
+    }
+    .hero .actions .btn .btn-copy strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
     .hero { padding: 28px 0 12px; }
     .hero-shot { margin: 8px 0 18px; }
     figure { margin: 0; }
@@ -741,8 +766,8 @@
       .hero h1 { order: 0; }
       .hero-copy { order: 1; }
       .hero-shot { order: 2; margin: 4px auto 0; }
-      .hero .actions { flex-direction: column; align-items: stretch; }
-      .hero .actions .btn { width: 100%; min-height: 48px; }
+      .hero .actions { grid-template-columns: 1fr; }
+      .hero .actions .btn { min-height: 68px; }
       .form-row { grid-template-columns: 1fr; }
       .duo-fold { grid-template-columns: 1fr; }
     }
@@ -912,8 +937,8 @@
             <a class="btn outline" href="https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
               <span class="btn-copy">
-                <strong>TBIPTV Xstream</strong>
-                <small>Mac · Apple silicon &amp; Intel</small>
+                <strong>Mac</strong>
+                <small>Apple silicon &amp; Intel · App Store</small>
               </span>
             </a>
             <span class="btn outline soon" aria-disabled="true">
