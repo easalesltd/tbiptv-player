@@ -871,6 +871,51 @@
       .brand strong { font-size: 15px; }
       .btn.compact { font-size: 14px; padding: 8px 12px; }
     }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-in {
+        animation: hero-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .hero-copy.hero-in { animation-delay: 0.08s; }
+      .hero-shot.hero-in { animation-delay: 0.16s; }
+      @keyframes hero-in {
+        from { opacity: 0; transform: translateY(22px); }
+        to { opacity: 1; transform: none; }
+      }
+      .scroll-reveal {
+        opacity: 0;
+        transform: translate3d(0, 32px, 0) scale(0.985);
+        filter: blur(6px);
+        transition:
+          opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+          filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform, filter;
+      }
+      .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        will-change: auto;
+      }
+      .scroll-reveal-child {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+        transition:
+          opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .scroll-reveal.is-visible .scroll-reveal-child {
+        opacity: 1;
+        transform: none;
+      }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(1) { transition-delay: 0.04s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(2) { transition-delay: 0.1s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(3) { transition-delay: 0.16s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(4) { transition-delay: 0.22s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(5) { transition-delay: 0.28s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(6) { transition-delay: 0.34s; }
+      .scroll-reveal.is-visible .scroll-reveal-child:nth-child(n+7) { transition-delay: 0.4s; }
+    }
   </style>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -913,13 +958,13 @@
   <div class="wrap">
     <main id="top">
       <section class="hero">
-        <h1>TBIPTV Xstream — IPTV player for your playlist</h1>
-        <figure class="hero-shot phone-hero">
+        <h1 class="hero-in">TBIPTV Xstream — IPTV player for your playlist</h1>
+        <figure class="hero-shot phone-hero hero-in">
           <div class="phone-bezel">
             <img src="images/iphone/02-home.jpg" width="540" height="1174" alt="TBIPTV Xstream home on iPhone">
           </div>
         </figure>
-        <div class="hero-copy">
+        <div class="hero-copy hero-in">
           <p class="lede">Bring your own Xtream or M3U playlist. Live TV, films and series on iPhone, iPad, Mac, Xbox and Windows—with Picture in Picture and CarPlay on iPhone where supported.</p>
           <p class="pill">£2.99 once · No app subscription · Player only</p>
           <div class="actions" id="download">
@@ -1545,6 +1590,33 @@
         if (event.target === dialog) dialog.close();
       });
       render("iphone");
+    })();
+  </script>
+  <script>
+    (function () {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var sections = document.querySelectorAll("main > section:not(.hero)");
+      sections.forEach(function (section) {
+        section.classList.add("scroll-reveal");
+        section.querySelectorAll(".feature, .else-card, .step, .stack > .card").forEach(function (child) {
+          child.classList.add("scroll-reveal-child");
+        });
+      });
+      var footer = document.querySelector("footer");
+      if (footer) footer.classList.add("scroll-reveal");
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+      );
+      document.querySelectorAll(".scroll-reveal").forEach(function (el) {
+        observer.observe(el);
+      });
     })();
   </script>
   <script src="consent.js"></script>
