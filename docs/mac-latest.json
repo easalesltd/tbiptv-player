@@ -1,9 +1,5 @@
 {
-  "version": "1.31",
-  "build": "32",
-  "url": "https://github.com/easalesltd/tbiptv-player/releases/download/mac-1.31/TBIPTV-1.31.dmg",
-  "size": 40678125,
-  "minimumSystemVersion": "14.0",
-  "notes": "****\n- In the TV guide, programmes that started before the visible hours no longer pile their titles on the first cell.\n- Movie and series posters have a star in the corner. Click it to add the title to Favourites; it turns gold.",
-  "published": "Sun, 22 Nov 2026 07:33:57 +0000"
+  "url": "https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574",
+  "store": "Mac App Store",
+  "notes": "Mac is on the App Store."
 }
