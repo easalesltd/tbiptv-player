@@ -22,7 +22,7 @@ It does not include, sell or link to channels, films, series or subscriptions.
 
 ## CarPlay
 
-On iPhone, when the car is parked you can browse live TV, films and series on CarPlay and watch there. Cars that cannot show video hide the app. It does not include channels.
+On iPhone, TBIPTV appears on any CarPlay car. Browse live TV, films and series on the car screen. Video when parked and the car supports it; otherwise Now Playing audio. It does not include channels.
 
 ## Platforms
 
