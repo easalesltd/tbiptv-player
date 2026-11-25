@@ -31,7 +31,8 @@ On iPhone it appears in CarPlay. On Android it appears in Android Auto. Browse H
 - Mac (Apple silicon and Intel): https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574?platform=mac
 - Apple TV (tvOS 17+): https://apps.apple.com/gb/app/tbiptv-xstream/id6837183574?platform=appleTV
 - Xbox and Windows: https://apps.microsoft.com/detail/9P69R4HTXG44
-- Android phone, tablet and Google TV: coming soon
+- Android phone and tablet: https://play.google.com/store/apps/details?id=com.easalesltd.tbiptvxstream
+- Google TV: coming soon
 
 ## Site
 
