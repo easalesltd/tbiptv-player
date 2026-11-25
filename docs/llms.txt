@@ -23,7 +23,7 @@ It does not include, sell or link to channels, films, series or subscriptions.
 
 ## CarPlay and Android Auto
 
-On iPhone it appears in CarPlay. On Android it appears in Android Auto. Browse Home, channels, films and series from the car, search, and listen in Now Playing. CarPlay shows posters. Search with Siri, or jump by letter group. The car plays the sound. It does not include channels.
+On iPhone it appears in CarPlay. On Android it appears in Android Auto. Browse Home, channels, films and series from the car, search, and listen in Now Playing. CarPlay shows posters. Search with the in-car keyboard, or say a name to Siri. The car plays the sound. It does not include channels.
 
 ## Platforms
 
